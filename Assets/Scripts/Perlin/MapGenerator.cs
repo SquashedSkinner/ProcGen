@@ -3,7 +3,7 @@ using System.Collections;
 
 public class MapGenerator : MonoBehaviour {
 
-	public enum DrawMode {NoiseMap, ColourMap, FalloffMap, CircularFalloff};
+	public enum DrawMode {NoiseMap, ColourMap, FalloffMap, Heatmap};
 	public DrawMode drawMode;
 	public enum Aesthetic {Satellite, Parchment};
 	public Aesthetic aesthetic;
@@ -31,22 +31,31 @@ public class MapGenerator : MonoBehaviour {
 	public BiomeType[] biomes;
 
 	float[,] SquareFalloff;
-	float[,] CircularFalloff;
+	public float[,] HeatMap;
 
 	void awake()
 	{
-		//SquareFalloff = FalloffGenerator.GenerateFalloffMap(mapWidth, mapHeight);
-		CircularFalloff = CircularFalloffGenerator.GenerateFalloffMap(mapHeight);
+		
+		SquareFalloff = FalloffGenerator.GenerateFalloffMap(mapWidth, mapHeight);
+
 	}
 
 	public void GenerateMap() {
-	if (aesthetic == Aesthetic.Satellite) {
+	// Changes between the available visual styles
+
+	float EquatorLine = mapHeight / 2;
+
+	if (aesthetic == Aesthetic.Satellite)
+	{
 		regions = SatelliteRegions;
 		Debug.Log("Setting Selected");
 	}
-	else if (aesthetic == Aesthetic.Parchment) {
+	else if (aesthetic == Aesthetic.Parchment)
+	{
 		regions = ParchmentRegions;
 	}
+
+
 
 		if (RandomSeed)
 		{
@@ -54,13 +63,15 @@ public class MapGenerator : MonoBehaviour {
 		}
 
 		float[,] noiseMap = Noise.GenerateNoiseMap (mapWidth, mapHeight, seed, noiseScale, octaves, persistance, lacunarity, offset);
-
+		WorldData[,] worldData = new WorldData[mapWidth,mapHeight];
 		Color[] colourMap = new Color[mapWidth * mapHeight];
 		for (int y = 0; y < mapHeight; y++) {
 			for (int x = 0; x < mapWidth; x++) {
 				if (useFalloff)
 				{
-					noiseMap[x,y] = Mathf.Clamp01(noiseMap[x,y] - CircularFalloff[x,y]);
+					noiseMap[x,y] = Mathf.Clamp01(noiseMap[x,y] - SquareFalloff[x,y]);
+					worldData[x,y].Height = noiseMap[x,y];
+					worldData[x,y].Temperature = DistanceFromEquator(EquatorLine, y);
 				}
 				float currentHeight = noiseMap [x, y];
 				for (int i = 0; i < regions.Length; i++) {
@@ -72,6 +83,7 @@ public class MapGenerator : MonoBehaviour {
 			}
 		}
 
+
 		MapDisplay display = FindObjectOfType<MapDisplay> ();
 		if (drawMode == DrawMode.NoiseMap) {
 			display.DrawTexture (TextureGenerator.TextureFromHeightMap(noiseMap));
@@ -79,10 +91,7 @@ public class MapGenerator : MonoBehaviour {
 			display.DrawTexture (TextureGenerator.TextureFromColourMap(colourMap, mapWidth, mapHeight));
 		} else if (drawMode == DrawMode.FalloffMap) {
 			display.DrawTexture(TextureGenerator.TextureFromHeightMap(FalloffGenerator.GenerateFalloffMap(mapWidth, mapHeight)));
-		} else if (drawMode == DrawMode.CircularFalloff) {
-			display.DrawTexture(TextureGenerator.TextureFromHeightMap(CircularFalloffGenerator.GenerateFalloffMap(mapWidth)));
-			
-		}
+		} 
 	}
 
 	void OnValidate() {
@@ -99,8 +108,17 @@ public class MapGenerator : MonoBehaviour {
 			octaves = 0;
 		}
 
-		//SquareFalloff = FalloffGenerator.GenerateFalloffMap(mapWidth, mapHeight);
-		CircularFalloff = CircularFalloffGenerator.GenerateFalloffMap((int)mapWidth);
+		SquareFalloff = FalloffGenerator.GenerateFalloffMap(mapWidth, mapHeight);
+	}
+
+	float DistanceFromEquator(float EquatorLine, float y)
+	{
+		float x = y / EquatorLine;
+		if (x < 0)
+		{
+			x = x * -1;
+		}
+		return x;
 	}
 }
 
@@ -117,4 +135,12 @@ public struct BiomeType {
 	public float Temperature;
 	public float Moisture;
 	public Color colour;
+}
+
+[System.Serializable]
+public struct WorldData {
+	public float Height;
+	public float Temperature;
+	public float Moisture;
+	public Color Colour;
 }
