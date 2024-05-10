@@ -63,62 +63,91 @@ public class MapGenerator : MonoBehaviour {
 			MoistureSeed = Random.Range(1,999999);
 		}
 
-		float[,] noiseMap = Noise.GenerateNoiseMap (mapWidth, mapHeight, seed, noiseScale, octaves, persistance, lacunarity, offset);
-		WorldData[,] worldData = new WorldData[mapWidth,mapHeight];
-		Color[] colourMap = new Color[mapWidth * mapHeight];
-		for (int y = 0; y < mapHeight; y++)
-		{
-			for (int x = 0; x < mapWidth; x++)
-			{
-				if (useFalloff)
-				{
-					noiseMap[x,y] = Mathf.Clamp01(noiseMap[x,y] - SquareFalloff[x,y]);
-					worldData[x,y].Height = noiseMap[x,y];
-					worldData[x,y].Temperature = DistanceFromEquator(EquatorLine, y);
-				}
-				float currentHeight = noiseMap [x, y];
-				for (int i = 0; i < regions.Length; i++) {
-					if (currentHeight <= regions [i].height) {
-						colourMap [y * mapWidth + x] = regions [i].colour;
-						break;
-					}
-				}
-			}
-		}
 
-		float[,] MoistureMap = Noise.GenerateNoiseMap (mapWidth, mapHeight, MoistureSeed, 450.0f, octaves, persistance, 4, offset);
+		// Moisture Map creates a separate instance of perlin noise with a different seed.
+        float[,] MoistureMap = Noise.GenerateNoiseMap(mapWidth, mapHeight, MoistureSeed, 250.0f, 3, persistance, 4, offset);
+		// Noisemap creates island shapes
+		float[,] noiseMap = Noise.GenerateNoiseMap (mapWidth, mapHeight, seed, noiseScale, octaves, persistance, lacunarity, offset);
+
+
+		// WorldData holds all information about each array element in preparation for the final render.
+        WorldData[,] worldData = new WorldData[mapWidth, mapHeight];
+        Color[] colourMap = new Color[mapWidth * mapHeight];
+
 		for (int y = 0; y < mapHeight; y++)
 		{
 			for (int x = 0; x < mapWidth; x++)
 			{
 				if (useFalloff)
 				{
-					MoistureMap[x,y] = Mathf.Clamp01(MoistureMap[x,y]);
-					worldData[x,y].Moisture = MoistureMap[x,y];
-				}
-			
+					MoistureMap[x, y] = Mathf.Clamp01(MoistureMap[x, y]);
+					worldData[x, y].Moisture = MoistureMap[x, y];
+
+                    noiseMap[x, y] = Mathf.Clamp01(noiseMap[x, y] - SquareFalloff[x, y]);
+                    worldData[x, y].Height = noiseMap[x, y];
+                    worldData[x, y].Temperature = DistanceFromEquator(EquatorLine, y, noiseMap[x,y]);
+                }
+
+                float currentHeight = noiseMap[x, y];
+                for (int i = 0; i < regions.Length; i++)
+                {
+                    if (currentHeight <= regions[i].height)
+                    {
+                        colourMap[y * mapWidth + x] = regions[i].colour;
+                        break;
+                    }
+                }
 
 				float temp = worldData[x, y].Temperature;
-				float wet = worldData[x,y].Moisture;
-				if (worldData[x,y].Height > 0.37f)
+				float wet = worldData[x, y].Moisture;
+				if (worldData[x, y].Height > 0.37f)
 				{
 					for (int i = 0; i < biomes.Length; i++)
 					{
-					if (temp >= biomes[i].Temperature)
-					{
-						if (wet <= biomes[i].Moisture)
+						if (temp <= biomes[i].Temperature)
 						{
-							colourMap [y * mapWidth + x] = biomes[i].colour;
-							break;
+							if (wet <= biomes[i].Moisture)
+							{
+								colourMap[y * mapWidth + x] = biomes[i].colour;
+								break;
+							}
+							else
+							{
+                                Debug.Log(biomes[i].Temperature + " " + biomes[i].Moisture);
+                            }
 						}
-					}
+                        else
+                        {
+                            Debug.Log(biomes[i].Temperature + " " + biomes[i].Moisture);
+                        }
+                    }
+
+
 				}
-		
-				
 			}
 		}
+
+
+
+
+
+		for (int y = 0; y < mapHeight; y++)
+		{
+			for (int x = 0; x < mapWidth; x++)
+			{
+				if (useFalloff)
+				{
+					noiseMap[x, y] = Mathf.Clamp01(noiseMap[x, y] - SquareFalloff[x, y]);
+					worldData[x, y].Height = noiseMap[x, y];
+					//worldData[x, y].Temperature = DistanceFromEquator(EquatorLine, y);
+				}
+
+			}
 		}
-		
+
+
+
+
 		MapDisplay display = FindObjectOfType<MapDisplay> ();
 		if (drawMode == DrawMode.NoiseMap) {
 			display.DrawTexture (TextureGenerator.TextureFromHeightMap(noiseMap));
@@ -147,13 +176,15 @@ public class MapGenerator : MonoBehaviour {
 		SquareFalloff = FalloffGenerator.GenerateFalloffMap(mapWidth, mapHeight);
 	}
 
-	float DistanceFromEquator(float EquatorLine, float y)
+	float DistanceFromEquator(float EquatorLine, float y, float noise)
 	{
+		
 		float x = y / EquatorLine;
-		if (x < 0)
+		if (x > 1)
 		{
-			x = x * -1;
+			x = 1/x;
 		}
+		x = x - noise / 3;
 		return x;
 	}
 }
