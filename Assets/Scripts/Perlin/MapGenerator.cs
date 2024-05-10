@@ -3,7 +3,7 @@ using System.Collections;
 
 public class MapGenerator : MonoBehaviour {
 
-	public enum DrawMode {NoiseMap, ColourMap, FalloffMap, Heatmap};
+	public enum DrawMode {NoiseMap, ColourMap, FalloffMap};
 	public DrawMode drawMode;
 	public enum Aesthetic {Satellite, Parchment};
 	public Aesthetic aesthetic;
@@ -20,6 +20,7 @@ public class MapGenerator : MonoBehaviour {
 
 	public bool RandomSeed;
 	public int seed;
+	public int MoistureSeed;
 	public Vector2 offset;
 
 	public bool autoUpdate;
@@ -40,33 +41,35 @@ public class MapGenerator : MonoBehaviour {
 
 	}
 
-	public void GenerateMap() {
-	// Changes between the available visual styles
-
-	float EquatorLine = mapHeight / 2;
-
-	if (aesthetic == Aesthetic.Satellite)
+	public void GenerateMap()
 	{
-		regions = SatelliteRegions;
-		Debug.Log("Setting Selected");
-	}
-	else if (aesthetic == Aesthetic.Parchment)
-	{
-		regions = ParchmentRegions;
-	}
+		// Changes between the available visual styles
 
+		float EquatorLine = mapHeight / 2;
 
+		if (aesthetic == Aesthetic.Satellite)
+		{
+			regions = SatelliteRegions;
+			Debug.Log("Setting Selected");
+		}
+		else if (aesthetic == Aesthetic.Parchment)
+		{
+			regions = ParchmentRegions;
+		}
 
 		if (RandomSeed)
 		{
         	seed = Random.Range(1,999999);
+			MoistureSeed = Random.Range(1,999999);
 		}
 
 		float[,] noiseMap = Noise.GenerateNoiseMap (mapWidth, mapHeight, seed, noiseScale, octaves, persistance, lacunarity, offset);
 		WorldData[,] worldData = new WorldData[mapWidth,mapHeight];
 		Color[] colourMap = new Color[mapWidth * mapHeight];
-		for (int y = 0; y < mapHeight; y++) {
-			for (int x = 0; x < mapWidth; x++) {
+		for (int y = 0; y < mapHeight; y++)
+		{
+			for (int x = 0; x < mapWidth; x++)
+			{
 				if (useFalloff)
 				{
 					noiseMap[x,y] = Mathf.Clamp01(noiseMap[x,y] - SquareFalloff[x,y]);
@@ -83,7 +86,39 @@ public class MapGenerator : MonoBehaviour {
 			}
 		}
 
+		float[,] MoistureMap = Noise.GenerateNoiseMap (mapWidth, mapHeight, MoistureSeed, 450.0f, octaves, persistance, 4, offset);
+		for (int y = 0; y < mapHeight; y++)
+		{
+			for (int x = 0; x < mapWidth; x++)
+			{
+				if (useFalloff)
+				{
+					MoistureMap[x,y] = Mathf.Clamp01(MoistureMap[x,y]);
+					worldData[x,y].Moisture = MoistureMap[x,y];
+				}
+			
 
+				float temp = worldData[x, y].Temperature;
+				float wet = worldData[x,y].Moisture;
+				if (worldData[x,y].Height > 0.37f)
+				{
+					for (int i = 0; i < biomes.Length; i++)
+					{
+					if (temp >= biomes[i].Temperature)
+					{
+						if (wet <= biomes[i].Moisture)
+						{
+							colourMap [y * mapWidth + x] = biomes[i].colour;
+							break;
+						}
+					}
+				}
+		
+				
+			}
+		}
+		}
+		
 		MapDisplay display = FindObjectOfType<MapDisplay> ();
 		if (drawMode == DrawMode.NoiseMap) {
 			display.DrawTexture (TextureGenerator.TextureFromHeightMap(noiseMap));
@@ -94,7 +129,8 @@ public class MapGenerator : MonoBehaviour {
 		} 
 	}
 
-	void OnValidate() {
+	void OnValidate()
+	{
 		if (mapWidth < 1) {
 			mapWidth = 1;
 		}
@@ -144,3 +180,4 @@ public struct WorldData {
 	public float Moisture;
 	public Color Colour;
 }
+
