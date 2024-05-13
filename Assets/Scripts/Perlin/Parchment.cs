@@ -94,9 +94,7 @@ public class Parchment : MonoBehaviour {
 			display.DrawTexture(TextureGenerator.TextureFromHeightMap(FalloffGenerator.GenerateFalloffMap(mapWidth, mapHeight)));
 		} 
 
-		Debug.Log("Turning Off");
 		ParchmentMap.transform.parent = ParentPage.transform;
-		ParchmentMap.SetActive(false);
 		
 	}
 

@@ -33,7 +33,7 @@ public class UI_Controller : MonoBehaviour
            if (Input.anyKeyDown)
            {
             BookAnimator.SetTrigger("Opened Book");
-            pageCount++;
+            
            }
         }
     }
@@ -43,9 +43,27 @@ public class UI_Controller : MonoBehaviour
         BookAnimator.SetBool("Open", true);
     }
 
-    public void OpenPage(int pageCount)
+    public void OpenPage()
     {
+        pageCount++;
         Page[pageCount].SetActive(true);
+        
+    }
+
+
+    public void RetryGeneration()
+    {
+        // Restart the Procedural Generation
+    }
+
+    public void Continue()
+    {
+        // Set up difficulty and settings
+    }
+
+    public void Settings()
+    {
+        // Close book and game
     }
 
 }
