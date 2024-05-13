@@ -10,7 +10,9 @@ public class UI_Controller : MonoBehaviour
     private GameObject Book;
     private Animator BookAnimator;
 
-
+    [SerializeField]
+    public GameObject[] Page;
+    private int pageCount;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -18,6 +20,9 @@ public class UI_Controller : MonoBehaviour
         // Find The Book Sprite and Animator
         Book = this.gameObject;
         BookAnimator = Book.GetComponent<Animator>();
+
+        // Set Page to 0
+        pageCount = 0;
     }
 
     // Update is called once per frame
@@ -28,6 +33,7 @@ public class UI_Controller : MonoBehaviour
            if (Input.anyKeyDown)
            {
             BookAnimator.SetTrigger("Opened Book");
+            pageCount++;
            }
         }
     }
@@ -36,4 +42,10 @@ public class UI_Controller : MonoBehaviour
     {
         BookAnimator.SetBool("Open", true);
     }
+
+    public void OpenPage(int pageCount)
+    {
+        Page[pageCount].SetActive(true);
+    }
+
 }

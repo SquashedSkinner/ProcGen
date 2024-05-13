@@ -3,9 +3,11 @@ using System.Collections;
 
 public class Parchment : MonoBehaviour {
 
+	public GameObject ParchmentMap;
+	public GameObject ParentPage;
 	public enum DrawMode {NoiseMap, ColourMap, FalloffMap};
 	public DrawMode drawMode;
-	public enum Aesthetic {Satellite, Parchment};
+	public enum Aesthetic {Parchment};
 	public Aesthetic aesthetic;
 
 	public int mapWidth;
@@ -32,16 +34,17 @@ public class Parchment : MonoBehaviour {
 	float[,] SquareFalloff;
 	public float[,] HeatMap;
 
-	void awake()
-	{
-		
+	void Awake()
+	{	
 		SquareFalloff = FalloffGenerator.GenerateFalloffMap(mapWidth, mapHeight);
-
+		Debug.Log("Starting");
 	}
 
-    void OnStart()
+    void Start()
     {
+		Debug.Log("Starting");
         GenerateMap();
+		Debug.Log("Starting");
     }
 
 	public void GenerateMap()
@@ -53,9 +56,6 @@ public class Parchment : MonoBehaviour {
 		{
         	seed = Random.Range(1,999999);
 		}
-
-
-		// Moisture Map creates a separate instance of perlin noise with a different seed.
 
 		// Noisemap creates island shapes
 		float[,] noiseMap = Noise.GenerateNoiseMap (mapWidth, mapHeight, seed, noiseScale, octaves, persistance, lacunarity, offset);
@@ -85,13 +85,6 @@ public class Parchment : MonoBehaviour {
 			}
 		}
 
-
-
-
-
-
-
-
 		MapDisplay display = FindObjectOfType<MapDisplay> ();
 		if (drawMode == DrawMode.NoiseMap) {
 			display.DrawTexture (TextureGenerator.TextureFromHeightMap(noiseMap));
@@ -100,6 +93,11 @@ public class Parchment : MonoBehaviour {
 		} else if (drawMode == DrawMode.FalloffMap) {
 			display.DrawTexture(TextureGenerator.TextureFromHeightMap(FalloffGenerator.GenerateFalloffMap(mapWidth, mapHeight)));
 		} 
+
+		Debug.Log("Turning Off");
+		ParchmentMap.transform.parent = ParentPage.transform;
+		ParchmentMap.SetActive(false);
+		
 	}
 
 	void OnValidate()
