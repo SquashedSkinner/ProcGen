@@ -50,7 +50,6 @@ public class MapGenerator : MonoBehaviour {
 		if (aesthetic == Aesthetic.Satellite)
 		{
 			regions = SatelliteRegions;
-			Debug.Log("Setting Selected");
 		}
 		else if (aesthetic == Aesthetic.Parchment)
 		{
@@ -100,7 +99,7 @@ public class MapGenerator : MonoBehaviour {
 
 				float temp = worldData[x, y].Temperature;
 				float wet = worldData[x, y].Moisture;
-				if (worldData[x, y].Height > 0.37f)
+				if (worldData[x, y].Height > 0.43f || worldData[x, y].Height >= 0.75f)
 				{
 					for (int i = 0; i < biomes.Length; i++)
 					{
@@ -111,17 +110,10 @@ public class MapGenerator : MonoBehaviour {
 								colourMap[y * mapWidth + x] = biomes[i].colour;
 								break;
 							}
-							else
-							{
-                                Debug.Log(biomes[i].Temperature + " " + biomes[i].Moisture);
-                            }
+				
 						}
-                        else
-                        {
-                            Debug.Log(biomes[i].Temperature + " " + biomes[i].Moisture);
-                        }
+                      
                     }
-
 
 				}
 			}
