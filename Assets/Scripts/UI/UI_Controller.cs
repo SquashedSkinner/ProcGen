@@ -10,6 +10,8 @@ public class UI_Controller : MonoBehaviour
     private GameObject Book;
     private Animator BookAnimator;
 
+    public GameObject MapGenerator;
+
     [SerializeField]
     public GameObject[] Page;
     private int pageCount;
@@ -53,17 +55,25 @@ public class UI_Controller : MonoBehaviour
 
     public void RetryGeneration()
     {
-        // Restart the Procedural Generation
+        MapGenerator.GetComponent<Parchment>().GenerateMap();
     }
 
     public void Continue()
     {
         // Set up difficulty and settings
+        Page[pageCount].SetActive(false);
+        BookAnimator.SetTrigger("NextPage");
+
     }
 
     public void Settings()
     {
         // Close book and game
+    }
+
+    public void resetNextPageTrigger()
+    {
+        BookAnimator.ResetTrigger("NextPage");
     }
 
 }

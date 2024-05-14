@@ -55,7 +55,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -93,7 +93,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -282,7 +282,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      29_0: 5181654206020448988
+      29_1: -2129540830080489608
+      29_2: -7588771707955378351
+      29_3: -8079029951621223423
+      29_4: 1789258754032348323
+      29_5: 3132063146471341891
+      29_6: 3005868555432197702
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

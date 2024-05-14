@@ -4,6 +4,8 @@ using System.Collections;
 public class Parchment : MonoBehaviour {
 
 	public GameObject ParchmentMap;
+	public Animator BookAnimator;
+
 	public GameObject ParentPage;
 	public enum DrawMode {NoiseMap, ColourMap, FalloffMap};
 	public DrawMode drawMode;
@@ -37,25 +39,21 @@ public class Parchment : MonoBehaviour {
 	void Awake()
 	{	
 		SquareFalloff = FalloffGenerator.GenerateFalloffMap(mapWidth, mapHeight);
-		Debug.Log("Starting");
 	}
 
     void Start()
     {
-		Debug.Log("Starting");
         GenerateMap();
-		Debug.Log("Starting");
+		BookAnimator.ResetTrigger("RegenComplete");
     }
 
 	public void GenerateMap()
 	{
+		
 		// Changes between the available visual styles
 			regions = ParchmentRegions;
 
-		if (RandomSeed)
-		{
         	seed = Random.Range(1,999999);
-		}
 
 		// Noisemap creates island shapes
 		float[,] noiseMap = Noise.GenerateNoiseMap (mapWidth, mapHeight, seed, noiseScale, octaves, persistance, lacunarity, offset);
@@ -81,7 +79,7 @@ public class Parchment : MonoBehaviour {
                     }
                 }
 
-				
+				BookAnimator.SetTrigger("RegenComplete");
 			}
 		}
 
@@ -95,6 +93,8 @@ public class Parchment : MonoBehaviour {
 		} 
 
 		ParchmentMap.transform.parent = ParentPage.transform;
+		
+		
 		
 	}
 
@@ -114,6 +114,12 @@ public class Parchment : MonoBehaviour {
 		}
 
 		SquareFalloff = FalloffGenerator.GenerateFalloffMap(mapWidth, mapHeight);
+	}
+
+
+	void Update()
+	{
+		//BookAnimator.ResetTrigger("RegenComplete");
 	}
 
 	
