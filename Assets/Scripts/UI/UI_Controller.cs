@@ -61,9 +61,14 @@ public class UI_Controller : MonoBehaviour
     public void Continue()
     {
         // Set up difficulty and settings
-        Page[pageCount].SetActive(false);
+        //Page[pageCount].SetActive(false);
         BookAnimator.SetTrigger("NextPage");
 
+    }
+
+    public void PreviousPage()
+    {
+        BookAnimator.SetTrigger("PreviousPage");
     }
 
     public void Settings()
