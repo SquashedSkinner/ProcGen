@@ -8,6 +8,7 @@ public class WeatherGenerator : MonoBehaviour
     public string[] WeatherType;
     public TMP_Text Text;
     public int counter;
+    public float Time;
 
     public bool locked;
 
@@ -28,7 +29,8 @@ public class WeatherGenerator : MonoBehaviour
         {
             counter = 1;
         }
-
+        Time = (float)counter * 300.0f;
+        Debug.Log(Time);
         Text.text = WeatherType[counter];
 
         LockButton();
@@ -36,15 +38,18 @@ public class WeatherGenerator : MonoBehaviour
 
     }
 
+    public float SetTime()
+    {
+        return Time;
+    }
+
     public void LockButton()
     {
-        Debug.Log("Locking");
         locked = true;
     }
 
     public void UnlockButton()
     {
-        Debug.Log("Unlocking");
         locked = false;
     }
 }

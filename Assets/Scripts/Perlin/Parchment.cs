@@ -116,12 +116,42 @@ public class Parchment : MonoBehaviour {
 		SquareFalloff = FalloffGenerator.GenerateFalloffMap(mapWidth, mapHeight);
 	}
 
-
-	void Update()
+	public float SetWidth()
 	{
-		//BookAnimator.ResetTrigger("RegenComplete");
+		return mapWidth;
 	}
 
+	public float SetHeight()
+	{
+		return mapHeight;
+	}
+
+	public float SetNoiseScale()
+	{
+		return noiseScale;
+	}
+
+	public int SetOctaves()
+	{
+		return octaves;
+	}
+
+	public float SetPersistance()
+	{
+		return persistance;
+	}
+
+	public float SetLacunarity()
+	{
+		return lacunarity;
+	}
+
+	public int SetSeed()
+	{
+		return seed;
+	}
+
+	
 	
 }
 
