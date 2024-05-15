@@ -42,6 +42,24 @@ public class PlayerController : MonoBehaviour
         rb.MovePosition(rb.position + movement * movementSpeed * Time.fixedDeltaTime);
     }
 
+    void OnTriggerStay2D(Collider2D col)
+    {
+        if (col.tag == "Push")
+        {
+            rb.mass = 1.0f;
+            anim.SetBool("isPushing", true);
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.tag == "Push")
+        {
+            anim.SetBool("isPushing", false);
+            rb.mass = 0.0001f;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -88,12 +106,14 @@ public class PlayerController : MonoBehaviour
             else if (Input.GetKeyDown("r"))
             {
                 anim.SetTrigger("Dive");
+                Player.GetComponent<BoxCollider2D>().enabled = false;
                 
             }
             else if (Input.GetKeyDown(KeyCode.Space))
             {
                 anim.SetTrigger("Jump");
             }
+
         if(Input.GetKeyUp("e"))
         {
             anim.SetBool("AttackHolding", false);
@@ -154,7 +174,7 @@ public class PlayerController : MonoBehaviour
             currentMana = maxMana;
         }
     }
-    }
+    
 
     public void ReduceSpeed(float debuff)
     {
@@ -163,7 +183,7 @@ public class PlayerController : MonoBehaviour
 
     public void IncreaseSpeed(float buff)
     {
-        movementSpeed = movementSpeed * buff
+        movementSpeed = movementSpeed * buff;
     }
 
     public void DefaultSpeedValues()
@@ -176,14 +196,21 @@ public class PlayerController : MonoBehaviour
         // more setter functions
     }
 
-    public int SetCurrentHealth()
-    {
+    //public int SetCurrentHealth()
+    //{
 
+    //}
+
+    //public int SetCurrentMana()
+    //{
+
+    //}
+
+
+    public void ReenableCollider()
+    {
+        Player.GetComponent<BoxCollider2D>().enabled = true;
     }
 
-    public int SetCurrentMana()
-    {
-
-    }
 
 }
