@@ -11,24 +11,24 @@ public class MapCycleFlip : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
 
-    public void Toggle()
-    {
-        if(Map.active)
-        {
-            mapAnim.Toggle("Flip");
-            DayNight.SetActive(true);
-            DayNightAnim.Toggle("FlipBack");
+    //public void Toggle()
+    //{
+    //    if(Map.active)
+    //    {
+    //        mapAnim.Toggle("Flip");
+    //        DayNight.SetActive(true);
+    //        DayNightAnim.Toggle("FlipBack");
            
-        }
-        else if (DayNight.active)
-        {
-            DayNightAnim.Toggle("Flip"); 
-            Map.SetActive(true);
-            MapAnim.Toggle("FlipBack");
-        }
-        //DayNight.SetActive(false);
-        //Map.SetActive(true);
-    }
+    //    }
+    //    else if (DayNight.active)
+    //    {
+    //        DayNightAnim.Toggle("Flip"); 
+    //        Map.SetActive(true);
+    //        MapAnim.Toggle("FlipBack");
+    //    }
+    //    //DayNight.SetActive(false);
+    //    //Map.SetActive(true);
+    //}
 
 
 }

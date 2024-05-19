@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: fb153b6ebdea3a04ebc3fd4349cc7d56
+timeCreated: 1501789622
+licenseType: Store
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 118786
+  packageName: Advanced Rule Tiles
+  packageVersion: 2.1
+  assetPath: Assets/Advanced Rule Tiles/Editor/AdvancedRuleTileEditor.cs
+  uploadId: 627734
