@@ -5,6 +5,7 @@ public class PlayerStatistics : MonoBehaviour
      // Statistics
     public int currentHealth;
     public int maxHealth;
+    public Animator anim;
 
     public int regenRate;
 
@@ -24,6 +25,14 @@ public class PlayerStatistics : MonoBehaviour
     public void ReduceHealth(int damage)
     {
         currentHealth = currentHealth - damage;
+        anim.SetTrigger("Hurt");
+        // Play damaged
+
+            if (currentHealth <= 0)
+            {
+                anim.SetTrigger("Die");
+            }
+        
     }
 
     public void IncreaseHealth(int cure)
@@ -75,10 +84,12 @@ public class PlayerStatistics : MonoBehaviour
     }
 
 
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        anim = this.gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame

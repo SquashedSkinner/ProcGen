@@ -1,4 +1,4 @@
-using UnityEngine;
+ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
 
     // Combat
     public Transform attackPoint;
+    public Transform attackPointThrust;
     public float attackRange;
     public LayerMask enemyLayers;
 
@@ -32,13 +33,29 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("AttackHolding", true);
         }
 
+        
+    }
+
+    public void AttackCollider()
+    {
         // Detect Enemies within range
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
-        foreach(Collider2D enemy in hitEnemies)
+        foreach (Collider2D enemy in hitEnemies)
         {
             int damage = Player.GetComponent<PlayerStatistics>().GetDamage();
-            Debug.Log(damage + enemy.name);
+            enemy.GetComponent<Enemy>().TakeDamage(damage);
+        }
+    }
+
+    public void AttackCollider2()
+    {
+        // Detect Enemies within range
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPointThrust.position, attackRange, enemyLayers);
+
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            int damage = (Player.GetComponent<PlayerStatistics>().GetDamage()) * 2;
             enemy.GetComponent<Enemy>().TakeDamage(damage);
         }
     }
@@ -46,6 +63,7 @@ public class PlayerController : MonoBehaviour
     void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+        Gizmos.DrawWireSphere(attackPointThrust.position, attackRange);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
