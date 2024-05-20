@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour
      //Player
     [SerializeField] private GameObject Player;
     [SerializeField] private GameObject BattleHUD;
-    private Animator anim;
+    public Animator anim;
 
      // Movement
     public Rigidbody2D rb;
@@ -14,27 +14,48 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Vector2 movement;
  
 
-    // Statistics
-    public int currentHealth;
-    public int maxHealth;
+    // Combat
+    public Transform attackPoint;
+    public float attackRange;
+    public LayerMask enemyLayers;
 
-    public int regenRate;
+   
 
-    public int currentMana;
-    public int maxMana;
+    [SerializeField] private float movementSpeed;
 
-    [SerializeField] private float movementSpeed = 3.0f;
-    [SerializeField] private float defaultSpeed = 3.0f;
+    void Attack()
+    {
+        // Play animation
+        anim.SetTrigger("Attack");
+        if (Input.GetKey("e"))
+        {
+            anim.SetBool("AttackHolding", true);
+        }
 
+        // Detect Enemies within range
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
+        foreach(Collider2D enemy in hitEnemies)
+        {
+            Debug.Log("Enemy Found");
+            int damage = Player.GetComponent<PlayerStatistics>().GetDamage();
+            enemy.GetComponent<Enemy>().TakeDamage(damage);
+        }
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        movementSpeed = Player.GetComponent<PlayerStatistics>().GetSpeed();
         Player = this.gameObject;
         rb = Player.GetComponent<Rigidbody2D>();
 
-        anim = this.GetComponent<Animator>();
+        anim = Player.GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -93,11 +114,7 @@ public class PlayerController : MonoBehaviour
             // Combat controls
             if (Input.GetKeyDown("e"))
             {
-                anim.SetTrigger("Attack");
-                if (Input.GetKey("e"))
-                {
-                    anim.SetBool("AttackHolding", true);
-                }
+                Attack();
             }
             else if (Input.GetKeyDown("q"))
             {
@@ -142,59 +159,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public void CalculateDamage()
-    {
-
-    }
-
-    public void ReduceHealth(int damage)
-    {
-        currentHealth = currentHealth - damage;
-    }
-
-    public void IncreaseHealth(int cure)
-    {
-        currentHealth = currentHealth + cure;
-        if (currentHealth > maxHealth)
-        {
-            currentHealth = maxHealth;
-        }
-    }
-
-    public void IncreaseMP(int mana)
-    {
-        currentMana = currentMana - mana;
-    }
-
-    public void DecreaseMP(int mana)
-    {
-        currentMana = currentMana + mana;
-        if (currentMana > maxMana)
-        {
-            currentMana = maxMana;
-        }
-    }
     
-
-    public void ReduceSpeed(float debuff)
-    {
-        movementSpeed = movementSpeed * debuff;
-    }
-
-    public void IncreaseSpeed(float buff)
-    {
-        movementSpeed = movementSpeed * buff;
-    }
-
-    public void DefaultSpeedValues()
-    {
-        movementSpeed = defaultSpeed;
-    }
-
-    public void UpdateUI()
-    {
-        // more setter functions
-    }
 
     //public int SetCurrentHealth()
     //{
