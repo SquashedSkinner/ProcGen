@@ -2,32 +2,48 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public Animator anim;
+
     public int maxHealth;
     [SerializeField]
     private int currentHealth;
 
+    public int damage;
+    public int movementSpeed;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        anim = this.gameObject.GetComponent<Animator>();
         currentHealth = maxHealth;
     }
     
+    public int GetHealth()
+    {
+        return currentHealth;
+    }
+
+    public int GetDamage()
+    {
+        return damage;
+    }
+
     public void TakeDamage(int damage)
     {
-        Debug.Log("Hit");
-        currentHealth -= damage;
+        currentHealth = currentHealth - damage;
+        anim.SetTrigger("Hurt");
 
         // Play damaged
 
         if (currentHealth <= 0)
         {
-            Debug.Log("Dead");
+            anim.SetTrigger("Die");
         }
     }
 
     void Die()
     {
-        // Dead innit
+        Destroy(this.gameObject);
     }
 
     // Update is called once per frame

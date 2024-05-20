@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     {
         // Play animation
         anim.SetTrigger("Attack");
-        if (Input.GetKey("e"))
+        if (Input.GetMouseButton(0))
         {
             anim.SetBool("AttackHolding", true);
         }
@@ -37,8 +37,8 @@ public class PlayerController : MonoBehaviour
 
         foreach(Collider2D enemy in hitEnemies)
         {
-            Debug.Log("Enemy Found");
             int damage = Player.GetComponent<PlayerStatistics>().GetDamage();
+            Debug.Log(damage + enemy.name);
             enemy.GetComponent<Enemy>().TakeDamage(damage);
         }
     }
@@ -112,7 +112,7 @@ public class PlayerController : MonoBehaviour
             }
 
             // Combat controls
-            if (Input.GetKeyDown("e"))
+            if (Input.GetMouseButtonDown(0))
             {
                 Attack();
             }
