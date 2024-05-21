@@ -52,6 +52,21 @@ public class PlayerStatistics : MonoBehaviour
         return currentMana;
     }
 
+    public int GetMaxMana()
+    {
+        return maxMana;
+    }
+
+    public int GetHealth()
+    {
+        return currentHealth;
+    }
+
+    public int GetMaxHealth()
+    {
+        return maxHealth;
+    }
+
     public void IncreaseMP(int mana)
     {
         currentMana = currentMana + mana;

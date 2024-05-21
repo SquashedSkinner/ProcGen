@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class Archangel : MonoBehaviour
 {
@@ -17,10 +18,13 @@ public class Archangel : MonoBehaviour
     public Transform attackPoint;
     public float attackRange;
     public LayerMask enemyLayers;
+    public bool attackEnabled;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        StartCoroutine(FollowTimer());
+        attackEnabled = true;
         rb = this.gameObject.GetComponent<Rigidbody2D>();
         //lastPosition = this.gameObject.transform.position;
         anim = this.gameObject.GetComponent<Animator>();
@@ -78,6 +82,32 @@ public class Archangel : MonoBehaviour
         
     }
 
+    IEnumerator MovementPause()
+    {
+        stopMove = true;
+
+        yield return new WaitForSeconds(2.5f);
+
+        stopMove = false;
+
+        StartCoroutine(FollowTimer());
+    }
+
+    IEnumerator FollowTimer()
+    {
+        yield return new WaitForSeconds(4.5f);
+        StartCoroutine(MovementPause());
+    }
+
+    IEnumerator AttackPause()
+    {
+        attackEnabled = false;
+
+        yield return new WaitForSeconds(1.5f);
+
+        attackEnabled = true;
+    }
+
     public void flip()
     {
         Debug.Log("Flipping");
@@ -97,15 +127,25 @@ public class Archangel : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        
-        if (col.tag == "Player")
+        if (attackEnabled == true)
         {
-            stopMove = true;
-            Attack();
-        }
-        else if (col.tag == "Magic" || col.tag == "Ordnance")
-        {
-            anim.SetTrigger("Teleport");
+            if (col.tag == "Player")
+            {
+
+                stopMove = true;
+                Attack();
+
+                StopCoroutine(MovementPause());
+                StopCoroutine(FollowTimer());
+
+                StartCoroutine(AttackPause());
+                StartCoroutine(MovementPause());
+
+            }
+            else if (col.tag == "Magic" || col.tag == "Ordnance")
+            {
+                anim.SetTrigger("Teleport");
+            }
         }
 
     }

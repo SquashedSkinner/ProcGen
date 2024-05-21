@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
      // Movement
     public Rigidbody2D rb;
     bool facingRight = true;
-    bool stopMove = false;
     [SerializeField] private Vector2 movement;
  
 
@@ -20,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public float attackRange;
     public LayerMask enemyLayers;
     public bool abilityFrozen;
+    float knockbackForce = 0.25f;
 
     // magic
     public Transform summonOffset;
@@ -121,7 +121,7 @@ public class PlayerController : MonoBehaviour
     // Identical code: different collider position
     public void AttackCollider2()
     {
-        float knockbackForce = 0.25f;
+        
         // Detect Enemies within range
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPointThrust.position, attackRange, enemyLayers);
 
@@ -252,7 +252,7 @@ public class PlayerController : MonoBehaviour
         // Set x to *= -1 to flip
         currentScale.x *= -1;
         Player.transform.localScale = currentScale;
-
+        knockbackForce = knockbackForce * -1;
         facingRight = !facingRight;
     }
  
