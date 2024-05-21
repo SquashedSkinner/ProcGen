@@ -13,7 +13,7 @@ public class Archangel : MonoBehaviour
     public bool stopMove;
     [SerializeField] private Vector2 movement;
 
-  // Combat
+    // Combat
     public Transform attackPoint;
     public float attackRange;
     public LayerMask enemyLayers;
@@ -31,7 +31,11 @@ public class Archangel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        int health = this.gameObject.GetComponent<Enemy>().GetHealth();
+        if(health < 150)
+        {
+            Phase2();
+        }
         if (player.position.x - this.gameObject.transform.position.x < 0.0f)
         {
             if (facingRight == false)
@@ -46,6 +50,7 @@ public class Archangel : MonoBehaviour
                 flip();
             }  
         }
+
         if (phase == 1)
         {
             speed = 1.0f;
@@ -62,23 +67,15 @@ public class Archangel : MonoBehaviour
             {
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
             int tpCheck = Random.Range(1, 250);
-            if (tpCheck == 1)
+            if (tpCheck == 2)
             {
-                Teleport();
+                anim.SetTrigger("Teleport");
             }
 
             }
             // Increase speed, ocassional teleport
         }
-        else if (phase == 3)
-        {
-            if (stopMove == false)
-            {
-            speed = 3.0f;
-            }
-            // Many teleports, attack flurries
-        }
-        //lastPosition = this.gameObject.transform.position;
+        
     }
 
     public void flip()
@@ -92,7 +89,10 @@ public class Archangel : MonoBehaviour
         facingRight = !facingRight;
     }
 
-
+    public void Phase2()
+    {
+        phase = 2;
+    }
 
 
     void OnTriggerEnter2D(Collider2D col)
@@ -106,7 +106,6 @@ public class Archangel : MonoBehaviour
         else if (col.tag == "Magic" || col.tag == "Ordnance")
         {
             anim.SetTrigger("Teleport");
-            anim.SetBool("isTeleporting", true);
         }
 
     }

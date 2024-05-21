@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerStatistics : MonoBehaviour
 {
+    public GameObject HealthManaBar;
+
      // Statistics
     public int currentHealth;
     public int maxHealth;
@@ -27,7 +29,7 @@ public class PlayerStatistics : MonoBehaviour
         currentHealth = currentHealth - damage;
         anim.SetTrigger("Hurt");
         // Play damaged
-
+        HealthManaBar.GetComponent<HealthManaBar>().EvaluateHealthState(currentHealth);
             if (currentHealth <= 0)
             {
                 anim.SetTrigger("Die");
@@ -42,20 +44,28 @@ public class PlayerStatistics : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
+
+    }
+
+    public int GetMana()
+    {
+        return currentMana;
     }
 
     public void IncreaseMP(int mana)
     {
-        currentMana = currentMana - mana;
+        currentMana = currentMana + mana;
+        HealthManaBar.GetComponent<HealthManaBar>().EvaluateManaState(currentMana);
     }
 
     public void DecreaseMP(int mana)
     {
-        currentMana = currentMana + mana;
+        currentMana = currentMana - mana;
         if (currentMana > maxMana)
         {
             currentMana = maxMana;
         }
+        HealthManaBar.GetComponent<HealthManaBar>().EvaluateManaState(currentMana);
     }
     
     public float GetSpeed()
@@ -89,7 +99,10 @@ public class PlayerStatistics : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        currentHealth = maxHealth;
+        currentMana = maxMana;
         anim = this.gameObject.GetComponent<Animator>();
+        HealthManaBar = GameObject.Find("HealthFrame");
     }
 
     // Update is called once per frame

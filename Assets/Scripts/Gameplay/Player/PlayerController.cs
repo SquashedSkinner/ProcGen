@@ -20,10 +20,63 @@ public class PlayerController : MonoBehaviour
     public float attackRange;
     public LayerMask enemyLayers;
 
+    // magic
+    public Transform summonOffset;
+    public Transform magicOffset;
+    public GameObject[] Spells;
+    public int selectedSpell;
+    public GameObject spellToCast;
    
 
     [SerializeField] private float movementSpeed;
 
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        movementSpeed = Player.GetComponent<PlayerStatistics>().GetSpeed();
+        Player = this.gameObject;
+        rb = Player.GetComponent<Rigidbody2D>();
+
+        anim = Player.GetComponent<Animator>();
+    }
+
+    // Takes into account the selected spell and assigns it to be instantiated
+    // Begin Magic Animation
+    public void MagicSpell()
+    {
+        spellToCast = Spells[selectedSpell];
+        anim.SetTrigger("Magic");
+        
+    }
+
+
+    // Mana is taken away
+    // Checks tag for correct spawn position
+    // Item is instantiated
+    void CastSpell()
+    {
+        int manaCost;
+
+        if (spellToCast.tag == "Totem")
+        {
+            Instantiate(spellToCast, summonOffset.position, Quaternion.identity);
+            manaCost = 3;
+            Player.GetComponent<PlayerStatistics>().DecreaseMP(manaCost);
+        }
+        else if (spellToCast.tag == "Magic")
+        {
+            Instantiate(spellToCast, magicOffset.position, Quaternion.identity);
+            manaCost = 1;
+            Player.GetComponent<PlayerStatistics>().DecreaseMP(manaCost);
+        }
+
+    }
+
+
+
+
+    // Set Animation Trigger to Attack
     void Attack()
     {
         // Play animation
@@ -31,9 +84,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             anim.SetBool("AttackHolding", true);
-        }
-
-        
+        }  
     }
 
     public void AttackCollider()
@@ -48,6 +99,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // Identical code: different collider position
     public void AttackCollider2()
     {
         // Detect Enemies within range
@@ -60,26 +112,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
-        Gizmos.DrawWireSphere(attackPointThrust.position, attackRange);
-    }
+    
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        movementSpeed = Player.GetComponent<PlayerStatistics>().GetSpeed();
-        Player = this.gameObject;
-        rb = Player.GetComponent<Rigidbody2D>();
+    
 
-        anim = Player.GetComponent<Animator>();
-    }
 
-    void FixedUpdate()
-    {
-        rb.MovePosition(rb.position + movement * movementSpeed * Time.fixedDeltaTime);
-    }
+
 
     void OnTriggerStay2D(Collider2D col)
     {
@@ -97,6 +135,17 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("isPushing", false);
             rb.mass = 0.0001f;
         }
+    }
+
+
+
+
+
+
+
+    void FixedUpdate()
+    {
+        rb.MovePosition(rb.position + movement * movementSpeed * Time.fixedDeltaTime);
     }
 
     // Update is called once per frame
@@ -134,6 +183,13 @@ public class PlayerController : MonoBehaviour
             {
                 Attack();
             }
+            else if (Input.GetMouseButtonDown(1))
+            {
+                if (Player.GetComponent<PlayerStatistics>().GetMana() > 0)
+                {
+                    MagicSpell();
+                }
+            }
             else if (Input.GetKeyDown("q"))
             {
                 anim.SetTrigger("Shoot");
@@ -156,6 +212,13 @@ public class PlayerController : MonoBehaviour
         
     }
 
+
+
+
+
+
+
+
     // Flip Player
     public void flipPlayer()
     {
@@ -166,34 +229,28 @@ public class PlayerController : MonoBehaviour
 
         facingRight = !facingRight;
     }
+ 
+ 
+ 
+    public void SpawnArrow()
+    {
+        
+    }
 
     public void ResetAttackTrigger()
     {
         anim.ResetTrigger("Attack");
     }
 
-    public void SpawnArrow()
-    {
-
-    }
-
-    
-
-    //public int SetCurrentHealth()
-    //{
-
-    //}
-
-    //public int SetCurrentMana()
-    //{
-
-    //}
-
-
     public void ReenableCollider()
     {
         Player.GetComponent<BoxCollider2D>().enabled = true;
     }
 
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+        Gizmos.DrawWireSphere(attackPointThrust.position, attackRange);
+    }
 
 }

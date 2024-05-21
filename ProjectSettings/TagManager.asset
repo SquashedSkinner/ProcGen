@@ -8,6 +8,8 @@ TagManager:
   - Push
   - Decoration
   - enemy
+  - Totem
+  - Magic
   layers:
   - Default
   - TransparentFX

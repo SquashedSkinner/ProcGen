@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: 012fa5a984ca8f54da81bce908b974ed
+guid: 8bbc9af1bb0829a4787d1bbf976a1e61
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4113829005332862926
-    second: 9_0
+      213: -630208447853014909
+    second: Fire Totem Fire Spit Sprite Sheet_0
   - first:
-      213: -215640629934891304
-    second: 9_1
+      213: 4244020279820644785
+    second: Fire Totem Fire Spit Sprite Sheet_1
+  - first:
+      213: 6879534624563808083
+    second: Fire Totem Fire Spit Sprite Sheet_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -54,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,23 +106,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 9_0
+      name: Fire Totem Fire Spit Sprite Sheet_0
       rect:
         serializedVersion: 2
-        x: 23
-        y: 133
-        width: 106
-        height: 28
+        x: 3
+        y: 4
+        width: 9
+        height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ec750913fa1471930800000000000000
-      internalID: 4113829005332862926
+      spriteID: 380554371cc0147f0800000000000000
+      internalID: -630208447853014909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Totem Fire Spit Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 5
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b1734e65f9c5ea30800000000000000
+      internalID: 4244020279820644785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Totem Fire Spit Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 0
+        width: 40
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 357402daa44097f50800000000000000
+      internalID: 6879534624563808083
       vertices: []
       indices: 
       edges: []
@@ -128,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a7d762278bdaf104eac9926e3dd6226b
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -136,8 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      9_0: 4113829005332862926
-      9_1: -215640629934891304
+      Fire Totem Fire Spit Sprite Sheet_0: -630208447853014909
+      Fire Totem Fire Spit Sprite Sheet_1: 4244020279820644785
+      Fire Totem Fire Spit Sprite Sheet_2: 6879534624563808083
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
