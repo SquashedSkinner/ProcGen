@@ -1,10 +1,14 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthManaBar : MonoBehaviour
 {
     public GameObject PlayerStatistics;
     public GameObject[] Mana;
     public GameObject[] Hearts;
+    public GameObject MagicWheel;
+
+    public 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,8 +19,23 @@ public class HealthManaBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            PlayerStatistics.GetComponent<PlayerController>().FreezeAbilities();
+            MagicWheel.SetActive(true);
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftControl))
+        {
+            MagicWheel.SetActive(false);
+            PlayerStatistics.GetComponent<PlayerController>().UnfreezeAbilities();
+        }
     }
+
+    public void NextMagicSelection()
+    {
+
+    }
+
 
     public void EvaluateHealthState(int currentHealth)
     {

@@ -1,7 +1,9 @@
 using UnityEngine;
 
-public class Explode : MonoBehaviour
+public class MagicBullet : MonoBehaviour
 {
+
+    public float speed = 5.0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,8 +17,8 @@ public class Explode : MonoBehaviour
         
     }
     
-    void OnCollision2D(Collider2D col)
+    void OnTrigger2D(Collision2D col)
     {
-        this.gameObject.GetComponent<Rigidbody2D>().mass = 40.0f;
+        
     }
 }

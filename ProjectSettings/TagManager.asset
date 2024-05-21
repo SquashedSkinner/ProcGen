@@ -10,6 +10,7 @@ TagManager:
   - enemy
   - Totem
   - Magic
+  - Paralysis
   layers:
   - Default
   - TransparentFX

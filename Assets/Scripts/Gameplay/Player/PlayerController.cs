@@ -19,12 +19,14 @@ public class PlayerController : MonoBehaviour
     public Transform attackPointThrust;
     public float attackRange;
     public LayerMask enemyLayers;
+    public bool abilityFrozen;
 
     // magic
     public Transform summonOffset;
     public Transform magicOffset;
     public GameObject[] Spells;
     public int selectedSpell;
+    public int manaCost;
     public GameObject spellToCast;
    
 
@@ -41,13 +43,19 @@ public class PlayerController : MonoBehaviour
         anim = Player.GetComponent<Animator>();
     }
 
+
+
+    public void NextMagicSelection(int selectedSpell)
+    {
+        spellToCast = Spells[selectedSpell]; 
+        Debug.Log(Spells[selectedSpell].name + " has been selected");
+    }
+
     // Takes into account the selected spell and assigns it to be instantiated
     // Begin Magic Animation
     public void MagicSpell()
-    {
-        spellToCast = Spells[selectedSpell];
-        anim.SetTrigger("Magic");
-        
+    {     
+        anim.SetTrigger("Magic");      
     }
 
 
@@ -56,19 +64,24 @@ public class PlayerController : MonoBehaviour
     // Item is instantiated
     void CastSpell()
     {
-        int manaCost;
 
         if (spellToCast.tag == "Totem")
-        {
-            Instantiate(spellToCast, summonOffset.position, Quaternion.identity);
-            manaCost = 3;
-            Player.GetComponent<PlayerStatistics>().DecreaseMP(manaCost);
+        { 
+            manaCost = 2;
+            if (Player.GetComponent<PlayerStatistics>().GetMana() >= manaCost)
+            {
+                Instantiate(spellToCast, summonOffset.position, Quaternion.identity);
+                Player.GetComponent<PlayerStatistics>().DecreaseMP(manaCost);
+            }
         }
         else if (spellToCast.tag == "Magic")
-        {
-            Instantiate(spellToCast, magicOffset.position, Quaternion.identity);
+        {       
             manaCost = 1;
-            Player.GetComponent<PlayerStatistics>().DecreaseMP(manaCost);
+            if (Player.GetComponent<PlayerStatistics>().GetMana() >= manaCost)
+            {
+                Instantiate(spellToCast, magicOffset.position, Quaternion.identity);
+                Player.GetComponent<PlayerStatistics>().DecreaseMP(manaCost);
+            }
         }
 
     }
@@ -79,12 +92,18 @@ public class PlayerController : MonoBehaviour
     // Set Animation Trigger to Attack
     void Attack()
     {
-        // Play animation
+        
+            // Play animation
+            
+            if (Input.GetMouseButtonUp(0))
+            {
+                anim.SetBool("AttackHolding", false);
+            }
+            else
+            {
+                anim.SetBool("AttackHolding", true);
+            }
         anim.SetTrigger("Attack");
-        if (Input.GetMouseButton(0))
-        {
-            anim.SetBool("AttackHolding", true);
-        }  
     }
 
     public void AttackCollider()
@@ -102,6 +121,7 @@ public class PlayerController : MonoBehaviour
     // Identical code: different collider position
     public void AttackCollider2()
     {
+        float knockbackForce = 0.25f;
         // Detect Enemies within range
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPointThrust.position, attackRange, enemyLayers);
 
@@ -109,6 +129,7 @@ public class PlayerController : MonoBehaviour
         {
             int damage = (Player.GetComponent<PlayerStatistics>().GetDamage()) * 2;
             enemy.GetComponent<Enemy>().TakeDamage(damage);
+            enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(knockbackForce, 0.0f));
         }
     }
 
@@ -179,16 +200,20 @@ public class PlayerController : MonoBehaviour
             }
 
             // Combat controls
+            if (abilityFrozen == false)
+        {
             if (Input.GetMouseButtonDown(0))
             {
                 Attack();
             }
+            else if (Input.GetMouseButtonUp(0))
+            {
+                anim.SetBool("AttackHolding", false);
+            }
             else if (Input.GetMouseButtonDown(1))
             {
-                if (Player.GetComponent<PlayerStatistics>().GetMana() > 0)
-                {
-                    MagicSpell();
-                }
+                
+                MagicSpell();         
             }
             else if (Input.GetKeyDown("q"))
             {
@@ -208,6 +233,7 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyUp("e"))
         {
             anim.SetBool("AttackHolding", false);
+        }
         }
         
     }
@@ -230,7 +256,16 @@ public class PlayerController : MonoBehaviour
         facingRight = !facingRight;
     }
  
- 
+    public void FreezeAbilities()
+    {
+        abilityFrozen = true;
+    }
+
+    public void UnfreezeAbilities()
+    {
+        abilityFrozen = false;
+    }
+
  
     public void SpawnArrow()
     {
