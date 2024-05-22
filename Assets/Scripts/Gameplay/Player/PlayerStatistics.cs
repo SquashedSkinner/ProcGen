@@ -44,7 +44,17 @@ public class PlayerStatistics : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
+        HealthManaBar.GetComponent<HealthManaBar>().EvaluateHealthState(currentHealth);
+    }
 
+    public void IncreaseMana(int cure)
+    {
+        currentMana = currentMana + cure;
+        if (currentMana > maxMana)
+        {
+            currentMana = maxMana;
+        }
+        HealthManaBar.GetComponent<HealthManaBar>().EvaluateManaState(currentMana);
     }
 
     public int GetMana()

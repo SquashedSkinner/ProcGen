@@ -1,4 +1,5 @@
  using UnityEngine;
+using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,9 +12,10 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     bool facingRight = true;
     [SerializeField] private Vector2 movement;
- 
+
 
     // Combat
+    public bool inCombat;
     public Transform attackPoint;
     public Transform attackPointThrust;
     public float attackRange;
@@ -130,6 +132,7 @@ public class PlayerController : MonoBehaviour
             int damage = (Player.GetComponent<PlayerStatistics>().GetDamage()) * 2;
             enemy.GetComponent<Enemy>().TakeDamage(damage);
             enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(knockbackForce, 0.0f));
+            
         }
     }
 
@@ -159,7 +162,14 @@ public class PlayerController : MonoBehaviour
     }
 
 
+    IEnumerator BeginRegen()
+    {
+            yield return new WaitForSeconds(5.0f);
+            Player.GetComponent<PlayerStatistics>().IncreaseHealth(10);
+            Player.GetComponent<PlayerStatistics>().IncreaseMana(1);
 
+            
+    }
 
 
 
@@ -172,6 +182,14 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (inCombat == false)
+        {
+            StartCoroutine(BeginRegen());
+        }
+        else if (inCombat == true)
+        {
+            StopCoroutine(BeginRegen());
+        }
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
 

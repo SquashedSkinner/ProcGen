@@ -1,11 +1,12 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Tilemaps;
 
 public class MapGenerator : MonoBehaviour {
 
-	public enum DrawMode {NoiseMap, ColourMap, FalloffMap};
+	public enum DrawMode { NoiseMap, ColourMap, FalloffMap, TileMap };
 	public DrawMode drawMode;
-	public enum Aesthetic {Satellite, Parchment};
+	public enum Aesthetic { Satellite, Parchment };
 	public Aesthetic aesthetic;
 
 	public int mapWidth;
@@ -14,7 +15,7 @@ public class MapGenerator : MonoBehaviour {
 
 
 	public int octaves;
-	[Range(0,1)]
+	[Range(0, 1)]
 	public float persistance;
 	public float lacunarity;
 
@@ -30,6 +31,10 @@ public class MapGenerator : MonoBehaviour {
 	public TerrainType[] ParchmentRegions;
 	public TerrainType[] regions;
 	public BiomeType[] biomes;
+	public RuleTile OceanTile;
+
+	public TerrainTile[] Tiles;
+	public Tilemap TileMap;
 
 	float[,] SquareFalloff;
 	public float[,] HeatMap;
@@ -41,20 +46,25 @@ public class MapGenerator : MonoBehaviour {
 
 	}
 
+	void Start()
+	{
+		GenerateMap();
+	}
+
 	public void GenerateMap()
 	{
 		// Changes between the available visual styles
 
 		float EquatorLine = mapHeight / 2;
 
-		if (aesthetic == Aesthetic.Satellite)
-		{
-			regions = SatelliteRegions;
-		}
-		else if (aesthetic == Aesthetic.Parchment)
-		{
-			regions = ParchmentRegions;
-		}
+		//if (aesthetic == Aesthetic.Satellite)
+		//{
+		//	regions = SatelliteRegions;
+		//}
+		//else if (aesthetic == Aesthetic.Parchment)
+		//{
+		//	regions = ParchmentRegions;
+		//}
 
 		if (RandomSeed)
 		{
@@ -64,14 +74,14 @@ public class MapGenerator : MonoBehaviour {
 
 
 		// Moisture Map creates a separate instance of perlin noise with a different seed.
-        float[,] MoistureMap = Noise.GenerateNoiseMap(mapWidth, mapHeight, MoistureSeed, 250.0f, 3, persistance, 4, offset);
+		float[,] MoistureMap = Noise.GenerateNoiseMap(mapWidth, mapHeight, MoistureSeed, 250.0f, 3, persistance, 4, offset);
 		// Noisemap creates island shapes
 		float[,] noiseMap = Noise.GenerateNoiseMap (mapWidth, mapHeight, seed, noiseScale, octaves, persistance, lacunarity, offset);
 
 
 		// WorldData holds all information about each array element in preparation for the final render.
-        WorldData[,] worldData = new WorldData[mapWidth, mapHeight];
-        Color[] colourMap = new Color[mapWidth * mapHeight];
+		WorldData[,] worldData = new WorldData[mapWidth, mapHeight];
+		Color[] colourMap = new Color[mapWidth * mapHeight];
 
 		for (int y = 0; y < mapHeight; y++)
 		{
@@ -82,19 +92,29 @@ public class MapGenerator : MonoBehaviour {
 					MoistureMap[x, y] = Mathf.Clamp01(MoistureMap[x, y]);
 					worldData[x, y].Moisture = MoistureMap[x, y];
 
-                    noiseMap[x, y] = Mathf.Clamp01(noiseMap[x, y] - SquareFalloff[x, y]);
-                    worldData[x, y].Height = noiseMap[x, y];
-                    worldData[x, y].Temperature = DistanceFromEquator(EquatorLine, y, noiseMap[x,y]);
-                }
+					noiseMap[x, y] = Mathf.Clamp01(noiseMap[x, y] - SquareFalloff[x, y]);
+					worldData[x, y].Height = noiseMap[x, y];
+					worldData[x, y].Temperature = DistanceFromEquator(EquatorLine, y, noiseMap[x, y]);
+				}
 
                 float currentHeight = noiseMap[x, y];
                 for (int i = 0; i < regions.Length; i++)
                 {
                     if (currentHeight <= regions[i].height)
                     {
-                        colourMap[y * mapWidth + x] = regions[i].colour;
+						colourMap[y * mapWidth + x] = regions[i].colour;
+						Debug.Log("Brr");
+                        //TileMap.SetTile(new Vector3Int(x,y,0), Tiles[i].TileSelect);
                         break;
                     }
+					if (i == 0)
+                        if (currentHeight <= regions[i].height)
+                        {
+                            TileMap.SetTile(new Vector3Int(x,y,0), OceanTile);
+                            break;
+                        }
+
+
                 }
 
 				float temp = worldData[x, y].Temperature;
@@ -107,13 +127,16 @@ public class MapGenerator : MonoBehaviour {
 						{
 							if (wet <= biomes[i].Moisture)
 							{
-								colourMap[y * mapWidth + x] = biomes[i].colour;
-								break;
+                                //colourMap[y * mapWidth + x] = biomes[i].colour;
+                                TileMap.SetTile(new Vector3Int(x, y, 0), biomes[i].TerrainTiles);
+
+                                break;
 							}
-				
+							
+
 						}
-                      
-                    }
+
+					}
 
 				}
 			}
@@ -123,19 +146,19 @@ public class MapGenerator : MonoBehaviour {
 
 
 
-		for (int y = 0; y < mapHeight; y++)
-		{
-			for (int x = 0; x < mapWidth; x++)
-			{
-				if (useFalloff)
-				{
-					noiseMap[x, y] = Mathf.Clamp01(noiseMap[x, y] - SquareFalloff[x, y]);
-					worldData[x, y].Height = noiseMap[x, y];
-					//worldData[x, y].Temperature = DistanceFromEquator(EquatorLine, y);
-				}
+		//for (int y = 0; y < mapHeight; y++)
+		//{
+		//	for (int x = 0; x < mapWidth; x++)
+		//	{
+		//		if (useFalloff)
+		//		{
+		//			noiseMap[x, y] = Mathf.Clamp01(noiseMap[x, y] - SquareFalloff[x, y]);
+		//			worldData[x, y].Height = noiseMap[x, y];
+		//			worldData[x, y].Temperature = DistanceFromEquator(EquatorLine, y);
+		//		}
 
-			}
-		}
+		//	}
+		//}
 
 
 
@@ -147,7 +170,11 @@ public class MapGenerator : MonoBehaviour {
 			display.DrawTexture (TextureGenerator.TextureFromColourMap(colourMap, mapWidth, mapHeight));
 		} else if (drawMode == DrawMode.FalloffMap) {
 			display.DrawTexture(TextureGenerator.TextureFromHeightMap(FalloffGenerator.GenerateFalloffMap(mapWidth, mapHeight)));
-		} 
+		}
+		else if (drawMode == DrawMode.TileMap)
+		{
+
+		}
 	}
 
 	void OnValidate()
@@ -189,11 +216,20 @@ public struct TerrainType {
 }
 
 [System.Serializable]
+public struct TerrainTile
+{
+    public string name;
+    public float height;
+    public Tile TileSelect;
+}
+
+[System.Serializable]
 public struct BiomeType {
 	public string BiomeName;
 	public float Temperature;
 	public float Moisture;
 	public Color colour;
+	public RuleTile TerrainTiles;
 }
 
 [System.Serializable]
