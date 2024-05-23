@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyStats : MonoBehaviour
+public class EnemyStatistics : MonoBehaviour
 {
     public Animator anim;
 
@@ -41,9 +41,19 @@ public class EnemyStats : MonoBehaviour
         }
     }
 
-    void Die()
+    public void Die()
     {
         Destroy(this.gameObject);
+    }
+
+    public void Hit()
+    {
+        anim.SetTrigger("Hurt");
+    }
+
+    public float GetSpeed()
+    {
+        return movementSpeed;
     }
 
     // Update is called once per frame

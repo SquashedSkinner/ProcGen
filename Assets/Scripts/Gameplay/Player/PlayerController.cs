@@ -114,7 +114,7 @@ public class PlayerController : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             int damage = Player.GetComponent<PlayerStatistics>().GetDamage();
-            enemy.GetComponent<EnemyStats>().TakeDamage(damage);
+            enemy.GetComponent<EnemyStatistics>().TakeDamage(damage);
         }
     }
 
@@ -128,7 +128,7 @@ public class PlayerController : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             int damage = (Player.GetComponent<PlayerStatistics>().GetDamage()) * 2;
-            enemy.GetComponent<EnemyStats>().TakeDamage(damage);
+            enemy.GetComponent<EnemyStatistics>().TakeDamage(damage);
             enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(knockbackForce, 0.0f));
             
         }
@@ -282,6 +282,8 @@ public class PlayerController : MonoBehaviour
     {
         Player.GetComponent<BoxCollider2D>().enabled = true;
     }
+
+  
 
     void OnDrawGizmosSelected()
     {
