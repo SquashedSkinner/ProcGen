@@ -1,0 +1,1301 @@
+fileFormatVersion: 2
+guid: dc0c0ef2caec4474499e6e57d7d82d10
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4385879040416818204
+    second: Black Pudding Sprite Sheet_0
+  - first:
+      213: -8312229461235899196
+    second: Black Pudding Sprite Sheet_1
+  - first:
+      213: 5341097203943025415
+    second: Black Pudding Sprite Sheet_2
+  - first:
+      213: -6912573421480028722
+    second: Black Pudding Sprite Sheet_3
+  - first:
+      213: 4119313702265710822
+    second: Black Pudding Sprite Sheet_4
+  - first:
+      213: -259492894775135188
+    second: Black Pudding Sprite Sheet_5
+  - first:
+      213: 5473921760944779977
+    second: Black Pudding Sprite Sheet_6
+  - first:
+      213: -8986143380176405628
+    second: Black Pudding Sprite Sheet_7
+  - first:
+      213: 5922652873661442434
+    second: Black Pudding Sprite Sheet_8
+  - first:
+      213: 5713888165705470179
+    second: Black Pudding Sprite Sheet_9
+  - first:
+      213: -5626885071725547476
+    second: Black Pudding Sprite Sheet_10
+  - first:
+      213: 5191117672786648229
+    second: Black Pudding Sprite Sheet_11
+  - first:
+      213: -339846373249632888
+    second: Black Pudding Sprite Sheet_12
+  - first:
+      213: -84216412921206079
+    second: Black Pudding Sprite Sheet_13
+  - first:
+      213: 4943264634227650165
+    second: Black Pudding Sprite Sheet_14
+  - first:
+      213: 5516728144343052067
+    second: Black Pudding Sprite Sheet_15
+  - first:
+      213: -7777521796489826192
+    second: Black Pudding Sprite Sheet_16
+  - first:
+      213: -1811981033448501524
+    second: Black Pudding Sprite Sheet_17
+  - first:
+      213: -3876830079865483181
+    second: Black Pudding Sprite Sheet_18
+  - first:
+      213: 8021257644954664264
+    second: Black Pudding Sprite Sheet_19
+  - first:
+      213: 1244914965314629230
+    second: Black Pudding Sprite Sheet_20
+  - first:
+      213: -5252299186711495787
+    second: Black Pudding Sprite Sheet_21
+  - first:
+      213: -4977649416973876300
+    second: Black Pudding Sprite Sheet_22
+  - first:
+      213: 1802989130432858656
+    second: Black Pudding Sprite Sheet_23
+  - first:
+      213: 1803260545695841573
+    second: Black Pudding Sprite Sheet_24
+  - first:
+      213: -1217707251703162379
+    second: Black Pudding Sprite Sheet_25
+  - first:
+      213: 1305470273548650593
+    second: Black Pudding Sprite Sheet_26
+  - first:
+      213: -4633738714160173700
+    second: Black Pudding Sprite Sheet_27
+  - first:
+      213: -6564240335955616448
+    second: Black Pudding Sprite Sheet_28
+  - first:
+      213: 3008144185558497708
+    second: Black Pudding Sprite Sheet_29
+  - first:
+      213: -5537361987359157966
+    second: Black Pudding Sprite Sheet_30
+  - first:
+      213: 7277860238932867434
+    second: Black Pudding Sprite Sheet_31
+  - first:
+      213: -7425829013884397165
+    second: Black Pudding Sprite Sheet_32
+  - first:
+      213: 3696978400380920113
+    second: Black Pudding Sprite Sheet_33
+  - first:
+      213: -5186175287756136296
+    second: Black Pudding Sprite Sheet_34
+  - first:
+      213: -7951902312161533628
+    second: Black Pudding Sprite Sheet_35
+  - first:
+      213: 9125684568381067558
+    second: Black Pudding Sprite Sheet_36
+  - first:
+      213: -3809349642111855826
+    second: Black Pudding Sprite Sheet_37
+  - first:
+      213: 3822161903139227219
+    second: Black Pudding Sprite Sheet_38
+  - first:
+      213: 6563003173847473566
+    second: Black Pudding Sprite Sheet_39
+  - first:
+      213: -5245119991303571179
+    second: Black Pudding Sprite Sheet_40
+  - first:
+      213: 2839210246534431
+    second: Black Pudding Sprite Sheet_41
+  - first:
+      213: -602625768732142183
+    second: Black Pudding Sprite Sheet_42
+  - first:
+      213: 1951671490511955735
+    second: Black Pudding Sprite Sheet_43
+  - first:
+      213: -4444756776818976888
+    second: Black Pudding Sprite Sheet_44
+  - first:
+      213: 5027202910795541450
+    second: Black Pudding Sprite Sheet_45
+  - first:
+      213: -1726934236915530725
+    second: Black Pudding Sprite Sheet_46
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 160
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1420e7ffb5cddc30800000000000000
+      internalID: 4385879040416818204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 160
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c46f77585705ac80800000000000000
+      internalID: -8312229461235899196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 160
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70b2bdfcb936f1a40800000000000000
+      internalID: 5341097203943025415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 160
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec550e8f81b9110a0800000000000000
+      internalID: -6912573421480028722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 160
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e862f5bcfdba2930800000000000000
+      internalID: 4119313702265710822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 160
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c24b0394698166cf0800000000000000
+      internalID: -259492894775135188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 160
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c2f469e6d647fb40800000000000000
+      internalID: 5473921760944779977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 160
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48b7bd3d43eca4380800000000000000
+      internalID: -8986143380176405628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 128
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2896986b86d713250800000000000000
+      internalID: 5922652873661442434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 128
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e0de23630fcb4f40800000000000000
+      internalID: 5713888165705470179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 128
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c20b9dbf6d949e1b0800000000000000
+      internalID: -5626885071725547476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 128
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ac53b9050e8a0840800000000000000
+      internalID: 5191117672786648229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 128
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 885304c268f984bf0800000000000000
+      internalID: -339846373249632888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 128
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cae29f5e9dc4def0800000000000000
+      internalID: -84216412921206079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 128
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57ee3e98ef00a9440800000000000000
+      internalID: 4943264634227650165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 128
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32fa7f5b40b5f8c40800000000000000
+      internalID: 5516728144343052067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 96
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 070bd571221b01490800000000000000
+      internalID: -7777521796489826192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 96
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cee8e81b9dc8ad6e0800000000000000
+      internalID: -1811981033448501524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 96
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 350911b259bb23ac0800000000000000
+      internalID: -3876830079865483181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 96
+        width: 48
+        height: 32
+      alignment: 9
+      pivot: {x: 0.36148676, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84db863645b315f60800000000000000
+      internalID: 8021257644954664264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 96
+        width: 47
+        height: 32
+      alignment: 9
+      pivot: {x: 0.3635916, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59bfcf1b7b51c17b0800000000000000
+      internalID: -5252299186711495787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 96
+        width: 37
+        height: 32
+      alignment: 9
+      pivot: {x: 0.46534523, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02a475dbf01850910800000000000000
+      internalID: 1802989130432858656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 96
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f9d0ddc4b5d91fe0800000000000000
+      internalID: -1217707251703162379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 96
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16803bf0c46fd1210800000000000000
+      internalID: 1305470273548650593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7de188a037a1bfb0800000000000000
+      internalID: -4633738714160173700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04d131b713227e4a0800000000000000
+      internalID: -6564240335955616448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca9fe5de2331fb920800000000000000
+      internalID: 3008144185558497708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 231d4b65c965723b0800000000000000
+      internalID: -5537361987359157966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 64
+        width: 47
+        height: 32
+      alignment: 9
+      pivot: {x: 0.35677126, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a69788ad357200560800000000000000
+      internalID: 7277860238932867434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 64
+        width: 48
+        height: 32
+      alignment: 9
+      pivot: {x: 0.35975584, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1312ff8844e4e4330800000000000000
+      internalID: 3696978400380920113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 64
+        width: 35
+        height: 32
+      alignment: 9
+      pivot: {x: 0.46336496, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44121036afa25a190800000000000000
+      internalID: -7951902312161533628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2359aceea8722bc0800000000000000
+      internalID: -3809349642111855826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35605ae000c0b0530800000000000000
+      internalID: 3822161903139227219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 32
+        width: 34
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 519fc0268279537b0800000000000000
+      internalID: -5245119991303571179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 32
+        width: 35
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5303375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99559326e0b03a7f0800000000000000
+      internalID: -602625768732142183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 32
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 717e83651eab51b10800000000000000
+      internalID: 1951671490511955735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 32
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 887d1b4c24d0152c0800000000000000
+      internalID: -4444756776818976888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acb27cf796634c540800000000000000
+      internalID: 5027202910795541450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1480321672b808e0800000000000000
+      internalID: -1726934236915530725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c499bcb89ee49046812c2236801141a
+      internalID: 1203278270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb88e48603430124fab73a04139a3419
+      internalID: 935285196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 0
+        width: 35
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccb09a79c11436e4d9c8f112965a33c1
+      internalID: -677146928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd43b8f4e6eb2d4a8bbd6b93f0897df
+      internalID: -386696957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67cdac3b917ff714a9dd82d57f087077
+      internalID: 2055773018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black Pudding Sprite Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65fa52d8181f8dd4a83c3903cfc631ed
+      internalID: -947048455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 7d705cec042545f46bf3f7e4ab97c1e1
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Black Pudding Sprite Sheet_0: 4385879040416818204
+      Black Pudding Sprite Sheet_1: -8312229461235899196
+      Black Pudding Sprite Sheet_10: -5626885071725547476
+      Black Pudding Sprite Sheet_11: 5191117672786648229
+      Black Pudding Sprite Sheet_12: -339846373249632888
+      Black Pudding Sprite Sheet_13: -84216412921206079
+      Black Pudding Sprite Sheet_14: 4943264634227650165
+      Black Pudding Sprite Sheet_15: 5516728144343052067
+      Black Pudding Sprite Sheet_16: -7777521796489826192
+      Black Pudding Sprite Sheet_17: -1811981033448501524
+      Black Pudding Sprite Sheet_18: -3876830079865483181
+      Black Pudding Sprite Sheet_19: 8021257644954664264
+      Black Pudding Sprite Sheet_2: 5341097203943025415
+      Black Pudding Sprite Sheet_20: 1244914965314629230
+      Black Pudding Sprite Sheet_21: -5252299186711495787
+      Black Pudding Sprite Sheet_22: -4977649416973876300
+      Black Pudding Sprite Sheet_23: 1802989130432858656
+      Black Pudding Sprite Sheet_24: 1803260545695841573
+      Black Pudding Sprite Sheet_25: -1217707251703162379
+      Black Pudding Sprite Sheet_26: 1305470273548650593
+      Black Pudding Sprite Sheet_27: -4633738714160173700
+      Black Pudding Sprite Sheet_28: -6564240335955616448
+      Black Pudding Sprite Sheet_29: 3008144185558497708
+      Black Pudding Sprite Sheet_3: -6912573421480028722
+      Black Pudding Sprite Sheet_30: -5537361987359157966
+      Black Pudding Sprite Sheet_31: 7277860238932867434
+      Black Pudding Sprite Sheet_32: -7425829013884397165
+      Black Pudding Sprite Sheet_33: 3696978400380920113
+      Black Pudding Sprite Sheet_34: -5186175287756136296
+      Black Pudding Sprite Sheet_35: -7951902312161533628
+      Black Pudding Sprite Sheet_36: 9125684568381067558
+      Black Pudding Sprite Sheet_37: -3809349642111855826
+      Black Pudding Sprite Sheet_38: 3822161903139227219
+      Black Pudding Sprite Sheet_39: 6563003173847473566
+      Black Pudding Sprite Sheet_4: 4119313702265710822
+      Black Pudding Sprite Sheet_40: -5245119991303571179
+      Black Pudding Sprite Sheet_41: 2839210246534431
+      Black Pudding Sprite Sheet_42: -602625768732142183
+      Black Pudding Sprite Sheet_43: 1951671490511955735
+      Black Pudding Sprite Sheet_44: -4444756776818976888
+      Black Pudding Sprite Sheet_45: 5027202910795541450
+      Black Pudding Sprite Sheet_46: -1726934236915530725
+      Black Pudding Sprite Sheet_47: 1203278270
+      Black Pudding Sprite Sheet_48: 935285196
+      Black Pudding Sprite Sheet_49: -1949695421
+      Black Pudding Sprite Sheet_5: -259492894775135188
+      Black Pudding Sprite Sheet_50: -677146928
+      Black Pudding Sprite Sheet_51: -1486642222
+      Black Pudding Sprite Sheet_52: -386696957
+      Black Pudding Sprite Sheet_53: 2055773018
+      Black Pudding Sprite Sheet_54: -947048455
+      Black Pudding Sprite Sheet_6: 5473921760944779977
+      Black Pudding Sprite Sheet_7: -8986143380176405628
+      Black Pudding Sprite Sheet_8: 5922652873661442434
+      Black Pudding Sprite Sheet_9: 5713888165705470179
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

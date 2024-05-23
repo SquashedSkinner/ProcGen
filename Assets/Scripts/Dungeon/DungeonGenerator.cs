@@ -7,6 +7,10 @@ public class DungeonGenerator : MonoBehaviour
 {
 
     [SerializeField]
+    private GameObject[] Furnishings;
+    public GameObject grid;
+
+    [SerializeField]
     private RuleTile groundTile;
     [SerializeField]
     private RuleTile pitTile;
@@ -45,37 +49,9 @@ public class DungeonGenerator : MonoBehaviour
         GenerateSquare(x, y, 1);
         NewRoute(x, y, routeLength, previousPos);
 
-       // FillWalls();
     }
 
-    //private void FillWalls()
-    //{
-    //    BoundsInt bounds = groundMap.cellBounds;
-    //    for (int xMap = bounds.xMin - 10; xMap <= bounds.xMax + 10; xMap++)
-    //    {
-    //        for (int yMap = bounds.yMin - 10; yMap <= bounds.yMax + 10; yMap++)
-    //        {
-    //            Vector3Int pos = new Vector3Int(xMap, yMap, 0);
-    //            Vector3Int posBelow = new Vector3Int(xMap, yMap - 1, 0);
-    //            Vector3Int posAbove = new Vector3Int(xMap, yMap + 1, 0);
-    //            TileBase tile = groundMap.GetTile(pos);
-    //            TileBase tileBelow = groundMap.GetTile(posBelow);
-    //            TileBase tileAbove = groundMap.GetTile(posAbove);
-    //            if (tile == null)
-    //            {
-    //                pitMap.SetTile(pos, pitTile);
-    //                if (tileBelow != null)
-    //                {
-    //                    groundMap.SetTile(pos, groundTile);
-    //                }
-    //                else if (tileAbove != null)
-    //                {
-    //                    groundMap.SetTile(pos, groundTile);
-    //                }
-    //            }
-    //        }
-    //    }
-    //}
+
 
     private void NewRoute(int x, int y, int routeLength, Vector2Int previousPos)
     {
@@ -159,8 +135,18 @@ public class DungeonGenerator : MonoBehaviour
         {
             for (int tileY = y - radius; tileY <= y + radius; tileY++)
             {
+                int furnishingsRand;
+                furnishingsRand = Random.Range(0,10000);
                 Vector3Int tilePos = new Vector3Int(tileX, tileY, 0);
                 groundMap.SetTile(tilePos, groundTile);
+                 if (furnishingsRand >= 0 && furnishingsRand < Furnishings.Length)
+                 {
+                    Debug.Log(furnishingsRand);
+                    // Make items spawn in dungeon
+                     GameObject spawn = Instantiate(Furnishings[furnishingsRand], new Vector3(tileX, tileY, 0.0f), Quaternion.identity) as GameObject;
+                     spawn.transform.parent = grid.transform;
+                 }
+
             }
         }
     }

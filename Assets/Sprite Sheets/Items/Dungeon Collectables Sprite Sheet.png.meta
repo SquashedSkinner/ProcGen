@@ -1,0 +1,2176 @@
+fileFormatVersion: 2
+guid: 84e2d32cdce6aad469aa736059c7736d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5795132384387976628
+    second: Dungeon Collectables Sprite Sheet_0
+  - first:
+      213: 2802424247123514298
+    second: Dungeon Collectables Sprite Sheet_1
+  - first:
+      213: 81769551153960554
+    second: Dungeon Collectables Sprite Sheet_2
+  - first:
+      213: 2630335587915801915
+    second: Dungeon Collectables Sprite Sheet_3
+  - first:
+      213: -3265025825690130475
+    second: Dungeon Collectables Sprite Sheet_4
+  - first:
+      213: -1597976072789882013
+    second: Dungeon Collectables Sprite Sheet_5
+  - first:
+      213: -3356260340951823705
+    second: Dungeon Collectables Sprite Sheet_6
+  - first:
+      213: 2649574677053433773
+    second: Dungeon Collectables Sprite Sheet_7
+  - first:
+      213: 6331647045418159788
+    second: Dungeon Collectables Sprite Sheet_8
+  - first:
+      213: -6671643150747474462
+    second: Dungeon Collectables Sprite Sheet_9
+  - first:
+      213: -3373443471918179579
+    second: Dungeon Collectables Sprite Sheet_10
+  - first:
+      213: 4648225557495479580
+    second: Dungeon Collectables Sprite Sheet_11
+  - first:
+      213: 8772259866380676791
+    second: Dungeon Collectables Sprite Sheet_12
+  - first:
+      213: -2426141904296102724
+    second: Dungeon Collectables Sprite Sheet_13
+  - first:
+      213: -1827579512816853494
+    second: Dungeon Collectables Sprite Sheet_14
+  - first:
+      213: 3603701249072702544
+    second: Dungeon Collectables Sprite Sheet_15
+  - first:
+      213: -6032210812793183407
+    second: Dungeon Collectables Sprite Sheet_16
+  - first:
+      213: -5941638177347198110
+    second: Dungeon Collectables Sprite Sheet_17
+  - first:
+      213: 6917924800011103445
+    second: Dungeon Collectables Sprite Sheet_18
+  - first:
+      213: -6991390476604396202
+    second: Dungeon Collectables Sprite Sheet_19
+  - first:
+      213: -418589105916498623
+    second: Dungeon Collectables Sprite Sheet_20
+  - first:
+      213: -8752958913627250862
+    second: Dungeon Collectables Sprite Sheet_21
+  - first:
+      213: -8706319844684124301
+    second: Dungeon Collectables Sprite Sheet_22
+  - first:
+      213: 8897301496892761426
+    second: Dungeon Collectables Sprite Sheet_23
+  - first:
+      213: -4434853446666236142
+    second: Dungeon Collectables Sprite Sheet_24
+  - first:
+      213: 3248598216678922861
+    second: Dungeon Collectables Sprite Sheet_25
+  - first:
+      213: -8446182804511005181
+    second: Dungeon Collectables Sprite Sheet_26
+  - first:
+      213: 7212557012996505310
+    second: Dungeon Collectables Sprite Sheet_27
+  - first:
+      213: 8365903074131333841
+    second: Dungeon Collectables Sprite Sheet_28
+  - first:
+      213: 2569477830846153271
+    second: Dungeon Collectables Sprite Sheet_29
+  - first:
+      213: -1130893329517884527
+    second: Dungeon Collectables Sprite Sheet_30
+  - first:
+      213: 1310981402420918322
+    second: Dungeon Collectables Sprite Sheet_31
+  - first:
+      213: -8583452072279318106
+    second: Dungeon Collectables Sprite Sheet_32
+  - first:
+      213: 6070594702028474256
+    second: Dungeon Collectables Sprite Sheet_33
+  - first:
+      213: -5856815415919006879
+    second: Dungeon Collectables Sprite Sheet_34
+  - first:
+      213: 7550584636589195748
+    second: Dungeon Collectables Sprite Sheet_35
+  - first:
+      213: -6520399812225576430
+    second: Dungeon Collectables Sprite Sheet_36
+  - first:
+      213: -2135674411976111573
+    second: Dungeon Collectables Sprite Sheet_37
+  - first:
+      213: 5808306057996397138
+    second: Dungeon Collectables Sprite Sheet_38
+  - first:
+      213: 6258659182703018986
+    second: Dungeon Collectables Sprite Sheet_39
+  - first:
+      213: -1539535696464456903
+    second: Dungeon Collectables Sprite Sheet_40
+  - first:
+      213: 7315712495703470027
+    second: Dungeon Collectables Sprite Sheet_41
+  - first:
+      213: 463629940378429747
+    second: Dungeon Collectables Sprite Sheet_42
+  - first:
+      213: 1129872601090694014
+    second: Dungeon Collectables Sprite Sheet_43
+  - first:
+      213: -2738602143152911375
+    second: Dungeon Collectables Sprite Sheet_44
+  - first:
+      213: 671290342831103214
+    second: Dungeon Collectables Sprite Sheet_45
+  - first:
+      213: -7900390622529547576
+    second: Dungeon Collectables Sprite Sheet_46
+  - first:
+      213: 6574401597729513017
+    second: Dungeon Collectables Sprite Sheet_47
+  - first:
+      213: 3523928752704864670
+    second: Dungeon Collectables Sprite Sheet_48
+  - first:
+      213: -1472162722725783463
+    second: Dungeon Collectables Sprite Sheet_49
+  - first:
+      213: 2099454792014173601
+    second: Dungeon Collectables Sprite Sheet_50
+  - first:
+      213: -2770338316290989603
+    second: Dungeon Collectables Sprite Sheet_51
+  - first:
+      213: 71129438820534706
+    second: Dungeon Collectables Sprite Sheet_52
+  - first:
+      213: -466188569157530836
+    second: Dungeon Collectables Sprite Sheet_53
+  - first:
+      213: 8199225098737534153
+    second: Dungeon Collectables Sprite Sheet_54
+  - first:
+      213: -1471242375319905866
+    second: Dungeon Collectables Sprite Sheet_55
+  - first:
+      213: -8293523692409202205
+    second: Dungeon Collectables Sprite Sheet_56
+  - first:
+      213: 554361441306247071
+    second: Dungeon Collectables Sprite Sheet_57
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bdcecd13327c6050800000000000000
+      internalID: 5795132384387976628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab31dbf310634e620800000000000000
+      internalID: 2802424247123514298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 144
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6699f939f0822100800000000000000
+      internalID: 81769551153960554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 144
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b352ac5f744d08420800000000000000
+      internalID: 2630335587915801915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 144
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d763457f4c40b2d0800000000000000
+      internalID: -3265025825690130475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 112
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5000001, y: 0.3881762}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36b09cd6a39d2d9e0800000000000000
+      internalID: -1597976072789882013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 112
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.37540627}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da7e3a7712e25c420800000000000000
+      internalID: 2649574677053433773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 112
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.49600625, y: 0.37540627}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e5678bf6ef8963a0800000000000000
+      internalID: -6671643150747474462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 112
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.51597476, y: 0.36741877}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1df8666480d18040800000000000000
+      internalID: 4648225557495479580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 112
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.37141252}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb4bdb3dacc945ed0800000000000000
+      internalID: -2426141904296102724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 112
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.4960065, y: 0.36741877}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0542c9b513be20230800000000000000
+      internalID: 3603701249072702544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 112
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.4920125, y: 0.36342478}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 263225fce8f0b8da0800000000000000
+      internalID: -5941638177347198110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 112
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.4960065, y: 0.42732406}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65d22fb476799fe90800000000000000
+      internalID: -6991390476604396202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 112
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.472044, y: 0.4233303}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25f98a34e3e378680800000000000000
+      internalID: -8752958913627250862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25aef95069f3b9050800000000000000
+      internalID: 5808306057996397138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 96
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae3004bed593bd650800000000000000
+      internalID: 6258659182703018986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 933d33dd07872aae0800000000000000
+      internalID: -1539535696464456903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcfaa4921c1a68560800000000000000
+      internalID: 7315712495703470027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 339ed7f69f42f6600800000000000000
+      internalID: 463629940378429747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 96
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7b1575f42d1eaf00800000000000000
+      internalID: 1129872601090694014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fb4f3c4cd78ef9d0800000000000000
+      internalID: -2738602143152911375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 96
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eec19999207e05900800000000000000
+      internalID: 671290342831103214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c29c4d369c2c5290800000000000000
+      internalID: -7900390622529547576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 96
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93e9d63ab67fc3b50800000000000000
+      internalID: 6574401597729513017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9142cea78287e030800000000000000
+      internalID: 3523928752704864670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 96
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9589b54bdc3d19be0800000000000000
+      internalID: -1472162722725783463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a51ffb8203c22d10800000000000000
+      internalID: 2099454792014173601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 80
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd162ddaaf7cd89d0800000000000000
+      internalID: -2770338316290989603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b988f509d3bcf000800000000000000
+      internalID: 71129438820534706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 80
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2b840167f3c789f0800000000000000
+      internalID: -466188569157530836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 80
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c4c7b339cf79c170800000000000000
+      internalID: 8199225098737534153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 80
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b91e88cad8159be0800000000000000
+      internalID: -1471242375319905866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e9d9a9842c77ec80800000000000000
+      internalID: -8293523692409202205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_57
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9f7b323bcc71b700800000000000000
+      internalID: 554361441306247071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_58
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3ec7e6a409983c48bbc8031e4b6a2e0
+      internalID: -1547295660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_59
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7daf627f681e4024fa30fa937296a855
+      internalID: -845295159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_60
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5999cf9f58c1534d83f404a322db5ab
+      internalID: 823594417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_61
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 64
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f09d6e4a49b8014ba297d1696135e1e
+      internalID: 1880798250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_62
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efe92e5351c5f3647937c197359527a6
+      internalID: -2068654573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_63
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 64
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bd02482dc32138419eba0b34ec0e349
+      internalID: 937568528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_64
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7635a65315ef2f54aa16457f3ec37b1d
+      internalID: -1860871605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_65
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 64
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6f6895aa6b096248b5ae1097f9049b1
+      internalID: 397752132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_66
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3c9a2409bad508469c80b8185a78b29
+      internalID: 396175196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_67
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 64
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b61ec8c097a0e424580849d2942934ab
+      internalID: -574923882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_68
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12457a99a2c46b24daeb3de6169d7cec
+      internalID: 2008864927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_69
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 983ec3e0f4ebf7a47bb0d0e7d9a1c83f
+      internalID: -227528036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_70
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78bc22bec5d3a004f83bd5a5b572184a
+      internalID: 692639007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_71
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2518a1cfad847284f9ede3e8eae84c4d
+      internalID: 767280077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_72
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 48
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2ae58883a3bffb48a610f24b32e495c
+      internalID: 267143998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_73
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4230997de30128f4da3c931271cd5e39
+      internalID: -233759340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_74
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6420a6a48685274e9d1ae284caf254b
+      internalID: 1044381541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_75
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7ed1cb04fac7854dacf6ea3c305b94f
+      internalID: -1257196121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_76
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccee18e61015cba48a6b8625446b241a
+      internalID: 784227225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_77
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f92e04ee8001844c9b64090f2df33c7
+      internalID: 226170296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_78
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 32
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6494b6332e03a2f4ab31d84143361c5f
+      internalID: -1467990726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_79
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6afcb5c1b24aee4cabea074d5f73391
+      internalID: -192010689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_80
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 32
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bccb69914994b7b46a0a04479b8bbbad
+      internalID: -1440221604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_81
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b2af69ccc9a0384a8d78faf90b9f6a4
+      internalID: -1933382142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_82
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 32
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04f8190b66a411c47924604eae5bf56a
+      internalID: -1163810225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_83
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b11062730bea0c74f81396edd0112976
+      internalID: -1758836047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_84
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 32
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 057580bca55058e42a3db0694b17c246
+      internalID: -641092012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_85
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9a82004cda4c2b408a5e18d4527fcce
+      internalID: 1312795705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_86
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ede5be7e6d2f6bb4a9d534d3eb384320
+      internalID: -52787972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_87
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f62b6b89ede9e24d923ff02eacd1ca4
+      internalID: 1924642108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_88
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4f31080c537d4c40b3a4b092c6f7d54
+      internalID: 1259613874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_89
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bafbb576a8e147e4ca75d6ae96fb1069
+      internalID: 2041328128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_90
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07775d5e379d13449ac2e5043646e9ea
+      internalID: 837021205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_91
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 16
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ce7d0e5804e7394b89b5690580d0ea7
+      internalID: 855828975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_92
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 16
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64fe3e50e72190947812f8d2e9f8819f
+      internalID: -757041067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_93
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 16
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dcbb826ff89bca46a47d267fb346ee1
+      internalID: -1348140795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_94
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 16
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f877fd42faeb53946affd1619cde77eb
+      internalID: -1819448869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_95
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 16
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ddf893db5976243bd9af578097fad9
+      internalID: -1320382061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_96
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 16
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2817954068346444a178a20dfc7f3f6
+      internalID: 1462476571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_97
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0065f4c0af3c2974a8acacdee78ebebe
+      internalID: 387710118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_98
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2681adc46bc930a4696b19db435792da
+      internalID: -1120259594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_99
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 209286495cc97464cbbba5d82f672a11
+      internalID: -1653662511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_100
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44a898259553dd45894873ee3c7248f
+      internalID: 233321128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_101
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b92cd6d20f3bb424ca9ee7c781bd9123
+      internalID: -434527973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_102
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 311b58ed3b527084f91f4e8169120b31
+      internalID: 988396921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_103
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d2b25c4fd82bf544866dc6f995a1e22
+      internalID: 1162511238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon Collectables Sprite Sheet_104
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e12411621d825d5489a075edee07b980
+      internalID: -2025644359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 56cf833990aab5548b86e3b6e068f30e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Dungeon Collectables Sprite Sheet_0: 5795132384387976628
+      Dungeon Collectables Sprite Sheet_1: 2802424247123514298
+      Dungeon Collectables Sprite Sheet_10: -3373443471918179579
+      Dungeon Collectables Sprite Sheet_100: 233321128
+      Dungeon Collectables Sprite Sheet_101: -434527973
+      Dungeon Collectables Sprite Sheet_102: 988396921
+      Dungeon Collectables Sprite Sheet_103: 1162511238
+      Dungeon Collectables Sprite Sheet_104: -2025644359
+      Dungeon Collectables Sprite Sheet_11: 4648225557495479580
+      Dungeon Collectables Sprite Sheet_12: 8772259866380676791
+      Dungeon Collectables Sprite Sheet_13: -2426141904296102724
+      Dungeon Collectables Sprite Sheet_14: -1827579512816853494
+      Dungeon Collectables Sprite Sheet_15: 3603701249072702544
+      Dungeon Collectables Sprite Sheet_16: -6032210812793183407
+      Dungeon Collectables Sprite Sheet_17: -5941638177347198110
+      Dungeon Collectables Sprite Sheet_18: 6917924800011103445
+      Dungeon Collectables Sprite Sheet_19: -6991390476604396202
+      Dungeon Collectables Sprite Sheet_2: 81769551153960554
+      Dungeon Collectables Sprite Sheet_20: -418589105916498623
+      Dungeon Collectables Sprite Sheet_21: -8752958913627250862
+      Dungeon Collectables Sprite Sheet_22: -8706319844684124301
+      Dungeon Collectables Sprite Sheet_23: 8897301496892761426
+      Dungeon Collectables Sprite Sheet_24: -4434853446666236142
+      Dungeon Collectables Sprite Sheet_25: 3248598216678922861
+      Dungeon Collectables Sprite Sheet_26: -8446182804511005181
+      Dungeon Collectables Sprite Sheet_27: 7212557012996505310
+      Dungeon Collectables Sprite Sheet_28: 8365903074131333841
+      Dungeon Collectables Sprite Sheet_29: 2569477830846153271
+      Dungeon Collectables Sprite Sheet_3: 2630335587915801915
+      Dungeon Collectables Sprite Sheet_30: -1130893329517884527
+      Dungeon Collectables Sprite Sheet_31: 1310981402420918322
+      Dungeon Collectables Sprite Sheet_32: -8583452072279318106
+      Dungeon Collectables Sprite Sheet_33: 6070594702028474256
+      Dungeon Collectables Sprite Sheet_34: -5856815415919006879
+      Dungeon Collectables Sprite Sheet_35: 7550584636589195748
+      Dungeon Collectables Sprite Sheet_36: -6520399812225576430
+      Dungeon Collectables Sprite Sheet_37: -2135674411976111573
+      Dungeon Collectables Sprite Sheet_38: 5808306057996397138
+      Dungeon Collectables Sprite Sheet_39: 6258659182703018986
+      Dungeon Collectables Sprite Sheet_4: -3265025825690130475
+      Dungeon Collectables Sprite Sheet_40: -1539535696464456903
+      Dungeon Collectables Sprite Sheet_41: 7315712495703470027
+      Dungeon Collectables Sprite Sheet_42: 463629940378429747
+      Dungeon Collectables Sprite Sheet_43: 1129872601090694014
+      Dungeon Collectables Sprite Sheet_44: -2738602143152911375
+      Dungeon Collectables Sprite Sheet_45: 671290342831103214
+      Dungeon Collectables Sprite Sheet_46: -7900390622529547576
+      Dungeon Collectables Sprite Sheet_47: 6574401597729513017
+      Dungeon Collectables Sprite Sheet_48: 3523928752704864670
+      Dungeon Collectables Sprite Sheet_49: -1472162722725783463
+      Dungeon Collectables Sprite Sheet_5: -1597976072789882013
+      Dungeon Collectables Sprite Sheet_50: 2099454792014173601
+      Dungeon Collectables Sprite Sheet_51: -2770338316290989603
+      Dungeon Collectables Sprite Sheet_52: 71129438820534706
+      Dungeon Collectables Sprite Sheet_53: -466188569157530836
+      Dungeon Collectables Sprite Sheet_54: 8199225098737534153
+      Dungeon Collectables Sprite Sheet_55: -1471242375319905866
+      Dungeon Collectables Sprite Sheet_56: -8293523692409202205
+      Dungeon Collectables Sprite Sheet_57: 554361441306247071
+      Dungeon Collectables Sprite Sheet_58: -1547295660
+      Dungeon Collectables Sprite Sheet_59: -845295159
+      Dungeon Collectables Sprite Sheet_6: -3356260340951823705
+      Dungeon Collectables Sprite Sheet_60: 823594417
+      Dungeon Collectables Sprite Sheet_61: 1880798250
+      Dungeon Collectables Sprite Sheet_62: -2068654573
+      Dungeon Collectables Sprite Sheet_63: 937568528
+      Dungeon Collectables Sprite Sheet_64: -1860871605
+      Dungeon Collectables Sprite Sheet_65: 397752132
+      Dungeon Collectables Sprite Sheet_66: 396175196
+      Dungeon Collectables Sprite Sheet_67: -574923882
+      Dungeon Collectables Sprite Sheet_68: 2008864927
+      Dungeon Collectables Sprite Sheet_69: -227528036
+      Dungeon Collectables Sprite Sheet_7: 2649574677053433773
+      Dungeon Collectables Sprite Sheet_70: 692639007
+      Dungeon Collectables Sprite Sheet_71: 767280077
+      Dungeon Collectables Sprite Sheet_72: 267143998
+      Dungeon Collectables Sprite Sheet_73: -233759340
+      Dungeon Collectables Sprite Sheet_74: 1044381541
+      Dungeon Collectables Sprite Sheet_75: -1257196121
+      Dungeon Collectables Sprite Sheet_76: 784227225
+      Dungeon Collectables Sprite Sheet_77: 226170296
+      Dungeon Collectables Sprite Sheet_78: -1467990726
+      Dungeon Collectables Sprite Sheet_79: -192010689
+      Dungeon Collectables Sprite Sheet_8: 6331647045418159788
+      Dungeon Collectables Sprite Sheet_80: -1440221604
+      Dungeon Collectables Sprite Sheet_81: -1933382142
+      Dungeon Collectables Sprite Sheet_82: -1163810225
+      Dungeon Collectables Sprite Sheet_83: -1758836047
+      Dungeon Collectables Sprite Sheet_84: -641092012
+      Dungeon Collectables Sprite Sheet_85: 1312795705
+      Dungeon Collectables Sprite Sheet_86: -52787972
+      Dungeon Collectables Sprite Sheet_87: 1924642108
+      Dungeon Collectables Sprite Sheet_88: 1259613874
+      Dungeon Collectables Sprite Sheet_89: 2041328128
+      Dungeon Collectables Sprite Sheet_9: -6671643150747474462
+      Dungeon Collectables Sprite Sheet_90: 837021205
+      Dungeon Collectables Sprite Sheet_91: 855828975
+      Dungeon Collectables Sprite Sheet_92: -757041067
+      Dungeon Collectables Sprite Sheet_93: -1348140795
+      Dungeon Collectables Sprite Sheet_94: -1819448869
+      Dungeon Collectables Sprite Sheet_95: -1320382061
+      Dungeon Collectables Sprite Sheet_96: 1462476571
+      Dungeon Collectables Sprite Sheet_97: 387710118
+      Dungeon Collectables Sprite Sheet_98: -1120259594
+      Dungeon Collectables Sprite Sheet_99: -1653662511
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

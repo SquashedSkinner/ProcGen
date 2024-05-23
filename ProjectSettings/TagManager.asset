@@ -11,6 +11,9 @@ TagManager:
   - Totem
   - Magic
   - Paralysis
+  - Ordnance
+  - Explosion
+  - Collectible
   layers:
   - Default
   - TransparentFX
