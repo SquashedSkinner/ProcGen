@@ -1,5 +1,4 @@
  using UnityEngine;
-using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,17 +10,16 @@ public class PlayerController : MonoBehaviour
      // Movement
     public Rigidbody2D rb;
     bool facingRight = true;
+    bool stopMove = false;
     [SerializeField] private Vector2 movement;
-
+ 
 
     // Combat
-    public bool inCombat;
     public Transform attackPoint;
     public Transform attackPointThrust;
     public float attackRange;
     public LayerMask enemyLayers;
     public bool abilityFrozen;
-    float knockbackForce = 0.25f;
 
     // magic
     public Transform summonOffset;
@@ -116,21 +114,21 @@ public class PlayerController : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             int damage = Player.GetComponent<PlayerStatistics>().GetDamage();
-            enemy.GetComponent<Enemy>().TakeDamage(damage);
+            enemy.GetComponent<EnemyStats>().TakeDamage(damage);
         }
     }
 
     // Identical code: different collider position
     public void AttackCollider2()
     {
-        
+        float knockbackForce = 0.25f;
         // Detect Enemies within range
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPointThrust.position, attackRange, enemyLayers);
 
         foreach (Collider2D enemy in hitEnemies)
         {
             int damage = (Player.GetComponent<PlayerStatistics>().GetDamage()) * 2;
-            enemy.GetComponent<Enemy>().TakeDamage(damage);
+            enemy.GetComponent<EnemyStats>().TakeDamage(damage);
             enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(knockbackForce, 0.0f));
             
         }
@@ -162,14 +160,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    IEnumerator BeginRegen()
-    {
-            yield return new WaitForSeconds(5.0f);
-            Player.GetComponent<PlayerStatistics>().IncreaseHealth(10);
-            Player.GetComponent<PlayerStatistics>().IncreaseMana(1);
 
-            
-    }
 
 
 
@@ -182,14 +173,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inCombat == false)
-        {
-            StartCoroutine(BeginRegen());
-        }
-        else if (inCombat == true)
-        {
-            StopCoroutine(BeginRegen());
-        }
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
 
@@ -270,7 +253,7 @@ public class PlayerController : MonoBehaviour
         // Set x to *= -1 to flip
         currentScale.x *= -1;
         Player.transform.localScale = currentScale;
-        knockbackForce = knockbackForce * -1;
+
         facingRight = !facingRight;
     }
  

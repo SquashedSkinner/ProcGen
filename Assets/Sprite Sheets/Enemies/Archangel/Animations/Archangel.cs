@@ -28,14 +28,14 @@ public class Archangel : MonoBehaviour
         rb = this.gameObject.GetComponent<Rigidbody2D>();
         //lastPosition = this.gameObject.transform.position;
         anim = this.gameObject.GetComponent<Animator>();
-        anim.SetFloat("Health", (float)this.gameObject.GetComponent<Enemy>().GetHealth());
+        anim.SetFloat("Health", (float)this.gameObject.GetComponent<EnemyStats>().GetHealth());
         player = GameObject.Find("Player").GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        int health = this.gameObject.GetComponent<Enemy>().GetHealth();
+        int health = this.gameObject.GetComponent<EnemyStats>().GetHealth();
         if(health < 150)
         {
             Phase2();
@@ -172,7 +172,7 @@ public class Archangel : MonoBehaviour
 
         foreach(Collider2D player in hitPlayer)
         {
-            int damage = this.gameObject.GetComponent<Enemy>().GetDamage();
+            int damage = this.gameObject.GetComponent<EnemyStats>().GetDamage();
             player.GetComponent<PlayerStatistics>().ReduceHealth(damage);
         }
     }

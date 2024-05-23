@@ -31,17 +31,15 @@ public class HealthManaBar : MonoBehaviour
         }
     }
 
-    public void NextMagicSelection()
+    public void NextMagicSelection(int Selection)
     {
-
+        // Debug.Log("");
     }
 
 
     public void EvaluateHealthState(int currentHealth)
     {
-       // int maxHealth = PlayerStatistics.GetComponent<PlayerStatistics>().GetMaxHealth;
-
-        if (currentHealth >= 100)
+        if (currentHealth >= 120)
         {
             Hearts[0].GetComponent<SpriteRenderer>().enabled = true; Hearts[1].GetComponent<SpriteRenderer>().enabled = true; Hearts[2].GetComponent<SpriteRenderer>().enabled = true; Hearts[3].GetComponent<SpriteRenderer>().enabled = true; Hearts[4].GetComponent<SpriteRenderer>().enabled = true;
         }
@@ -70,23 +68,23 @@ public class HealthManaBar : MonoBehaviour
 
     public void EvaluateManaState(int currentMana)
     {
-        if (currentMana >= 9)
+        if (currentMana == 5)
         {
             Mana[0].GetComponent<SpriteRenderer>().enabled = true; Mana[1].GetComponent<SpriteRenderer>().enabled = true; Mana[2].GetComponent<SpriteRenderer>().enabled = true; Mana[3].GetComponent<SpriteRenderer>().enabled = true; Mana[4].GetComponent<SpriteRenderer>().enabled = true;
         }
-        else if (currentMana >= 7 || currentMana < 9)
+        else if (currentMana == 4)
         {
             Mana[0].GetComponent<SpriteRenderer>().enabled = true; Mana[1].GetComponent<SpriteRenderer>().enabled = true; Mana[2].GetComponent<SpriteRenderer>().enabled = true; Mana[3].GetComponent<SpriteRenderer>().enabled = true; Mana[4].GetComponent<SpriteRenderer>().enabled = false;
         }
-        else if (currentMana >= 5 || currentMana < 7)
+        else if (currentMana == 3)
         {
             Mana[0].GetComponent<SpriteRenderer>().enabled = true; Mana[1].GetComponent<SpriteRenderer>().enabled = true; Mana[2].GetComponent<SpriteRenderer>().enabled = true; Mana[3].GetComponent<SpriteRenderer>().enabled = false; Mana[4].GetComponent<SpriteRenderer>().enabled = false;
         }
-        else if (currentMana >= 3 || currentMana < 5)
+        else if (currentMana == 2)
         {
             Mana[0].GetComponent<SpriteRenderer>().enabled = true; Mana[1].GetComponent<SpriteRenderer>().enabled = true; Mana[2].GetComponent<SpriteRenderer>().enabled = false; Mana[3].GetComponent<SpriteRenderer>().enabled = false; Mana[4].GetComponent<SpriteRenderer>().enabled = false;
         }
-        else if (currentMana >= 1 || currentMana < 3)
+        else if (currentMana == 1)
         {
             Mana[0].GetComponent<SpriteRenderer>().enabled = true; Mana[1].GetComponent<SpriteRenderer>().enabled = false; Mana[2].GetComponent<SpriteRenderer>().enabled = false; Mana[3].GetComponent<SpriteRenderer>().enabled = false; Mana[4].GetComponent<SpriteRenderer>().enabled = false;
         }

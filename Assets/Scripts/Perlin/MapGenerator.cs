@@ -103,7 +103,6 @@ public class MapGenerator : MonoBehaviour {
                     if (currentHeight <= regions[i].height)
                     {
 						colourMap[y * mapWidth + x] = regions[i].colour;
-						Debug.Log("Brr");
                         //TileMap.SetTile(new Vector3Int(x,y,0), Tiles[i].TileSelect);
                         break;
                     }
