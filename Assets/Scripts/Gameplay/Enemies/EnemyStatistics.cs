@@ -31,6 +31,7 @@ public class EnemyStatistics : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth = currentHealth - damage;
+        this.gameObject.GetComponent<FloatingHealthbar>().UpdateHealthBar(currentHealth, maxHealth);
         anim.SetTrigger("Hurt");
 
         // Play damaged
@@ -38,6 +39,7 @@ public class EnemyStatistics : MonoBehaviour
         if (currentHealth <= 0)
         {
             anim.SetTrigger("Die");
+            this.gameObject.GetComponent<EnemyController>().enabled = false;
         }
     }
 

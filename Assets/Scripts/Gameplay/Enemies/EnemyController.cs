@@ -9,8 +9,6 @@ public class EnemyController : MonoBehaviour
 
     // Movement
     public Transform Target;
-    public Transform view;
-    public float viewRange;
 
     public Rigidbody2D rb;
     bool facingRight = true;
@@ -67,7 +65,7 @@ public class EnemyController : MonoBehaviour
 
         if (!stopMove)
         {
-            transform.position = Vector3.MoveTowards(transform.position, Target.transform.position, movementSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, Target.transform.position - new Vector3(0f,0.3f,0f), movementSpeed * Time.deltaTime);
         }
 
         Enemy.transform.hasChanged = false;
@@ -111,7 +109,7 @@ public class EnemyController : MonoBehaviour
     {
         Gizmos.DrawWireSphere(attackPoint_1.position, attackRange_1);
         Gizmos.DrawWireSphere(attackPoint_2.position, attackRange_2);
-        Gizmos.DrawWireSphere(view.position, viewRange);
+       
     }
 
     public void Attack()
