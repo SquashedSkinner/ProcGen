@@ -9,6 +9,16 @@ public class EnemyController : MonoBehaviour
 
     // Movement
     public Transform Target;
+    private bool pursuing;
+    private bool patrolling;
+
+    public Vector3 target;
+    protected Vector3 velocity;
+    protected Vector3 previousPos;
+
+    private bool flipped;
+    [SerializeField] protected Transform[] waypoints;
+
 
     public Rigidbody2D rb;
     bool facingRight = true;
@@ -40,6 +50,10 @@ public class EnemyController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        patrolling = true;
+        pursuing = false;
+
+        target = waypoints[1].position;
         Target = GameObject.Find("Player").GetComponent<Transform>();
         Enemy = this.gameObject;
 
@@ -52,23 +66,37 @@ public class EnemyController : MonoBehaviour
         int health = this.gameObject.GetComponent<EnemyStatistics>().GetHealth();
     }
 
+    void FixedUpdate()
+    {
+        FaceTowards(Target.position);
+    }
 
     // Update is called once per frame
     void Update()
     {
         int health = this.gameObject.GetComponent<EnemyStatistics>().GetHealth();
         
-        if (Enemy.transform.hasChanged == true)
+        if (pursuing)
         {
-            anim.SetBool("isMoving", true);
+            Pursue();
+        }
+        else if (patrolling)
+        {
+            Patrol();
         }
 
-        if (!stopMove)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, Target.transform.position - new Vector3(0f,0.3f,0f), movementSpeed * Time.deltaTime);
-        }
+        //Movement();
 
-        Enemy.transform.hasChanged = false;
+        // if (Enemy.transform.hasChanged == true)
+        // {
+        //     anim.SetBool("isMoving", true);
+        // }
+
+        // if (!stopMove)
+        // {
+        //     transform.position = Vector3.MoveTowards(transform.position, Target.transform.position - new Vector3(0f,0.3f,0f), movementSpeed * Time.deltaTime);
+        // }
+
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -111,6 +139,55 @@ public class EnemyController : MonoBehaviour
         Gizmos.DrawWireSphere(attackPoint_2.position, attackRange_2);
        
     }
+    
+    public void Pursue()
+    {
+        patrolling = false;
+        pursuing = true;
+
+
+    }
+
+    public virtual IEnumerator SetTarget(Vector3 position)
+    {
+        yield return new WaitForSeconds(pauseTimer);
+        target = position;
+        FaceTowards(position - transform.position);
+    }
+
+    public virtual void Patrol()
+    {
+        pursuing = false;
+        patrolling = true;
+
+        velocity = ((transform.position - previousPos) / Time.deltaTime);
+        previousPos = transform.position;
+
+        if (transform.position != target)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, target, movementSpeed * Time.deltaTime);
+        }
+        else
+        {
+            if (target == waypoints[0].position)
+            {
+                Debug.Log("Target Reached");
+                if (flipped)
+                {
+                    flipped = !flipped;
+                    StartCoroutine("SetTarget", waypoints[1].position);
+                }
+            }
+            else
+            {
+                if (!flipped)
+                {
+                    flipped = !flipped;
+                    StartCoroutine("SetTarget", waypoints[0].position);
+                }
+            }
+        }
+    }
 
     public void Attack()
     {
@@ -151,15 +228,28 @@ public class EnemyController : MonoBehaviour
     }
 
     
-    public void flip()
+    public void FaceTowards(Vector3 dir)
     {
-        Debug.Log("Flipping");
         Vector3 currentScale = this.gameObject.transform.localScale;
-        // Set x to *= -1 to flip
-        currentScale.x *= -1;
-        gameObject.transform.localScale = currentScale;
 
-        facingRight = !facingRight;
+        if (dir.x < 0f)
+        {
+            if(facingRight)
+            {
+            Enemy.GetComponent<SpriteRenderer>().flipX = true;    
+            facingRight = true;
+            gameObject.transform.localScale = currentScale;
+            }
+        }
+        else
+        {
+             if(!facingRight)
+            {
+            Enemy.GetComponent<SpriteRenderer>().flipX = false;    
+            facingRight = false;
+            gameObject.transform.localScale = currentScale;
+            }        
+        }
     }
 
     public void ToggleMove()

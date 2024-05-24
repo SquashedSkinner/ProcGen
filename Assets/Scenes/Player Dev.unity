@@ -1162,6 +1162,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &638278578
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 638278579}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &638278579
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638278578}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.71, y: 1.1073939, z: -0.041802004}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &640160573
 GameObject:
   m_ObjectHideFlags: 0
@@ -2472,6 +2503,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &971047878
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 971047879}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &971047879
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971047878}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.68, y: -2.42, z: -0.041802004}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &971307590
 GameObject:
   m_ObjectHideFlags: 0
@@ -6054,13 +6116,17 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1978976952645873972, guid: 8ca91d4e4d09d514ca28126795d88f2e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.56
+      objectReference: {fileID: 0}
     - target: {fileID: 3408962601211772557, guid: 8ca91d4e4d09d514ca28126795d88f2e, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1179798137, guid: de7339f54539d91458e5697af736b1f2, type: 3}
     - target: {fileID: 3408962601211772557, guid: 8ca91d4e4d09d514ca28126795d88f2e, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3821157400400109133, guid: 8ca91d4e4d09d514ca28126795d88f2e, type: 3}
       propertyPath: m_Controller
@@ -6090,6 +6156,18 @@ PrefabInstance:
       propertyPath: playerLayer.m_Bits
       value: 128
       objectReference: {fileID: 0}
+    - target: {fileID: 5012002788102998900, guid: 8ca91d4e4d09d514ca28126795d88f2e, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012002788102998900, guid: 8ca91d4e4d09d514ca28126795d88f2e, type: 3}
+      propertyPath: 'waypoints.Array.data[0]'
+      value: 
+      objectReference: {fileID: 971047879}
+    - target: {fileID: 5012002788102998900, guid: 8ca91d4e4d09d514ca28126795d88f2e, type: 3}
+      propertyPath: 'waypoints.Array.data[1]'
+      value: 
+      objectReference: {fileID: 638278579}
     - target: {fileID: 6958539510562541559, guid: 8ca91d4e4d09d514ca28126795d88f2e, type: 3}
       propertyPath: damage
       value: 30
@@ -6101,6 +6179,10 @@ PrefabInstance:
     - target: {fileID: 6958539510562541559, guid: 8ca91d4e4d09d514ca28126795d88f2e, type: 3}
       propertyPath: movementSpeed
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6980968639257439709, guid: 8ca91d4e4d09d514ca28126795d88f2e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.06
       objectReference: {fileID: 0}
     - target: {fileID: 7701019325597622589, guid: 8ca91d4e4d09d514ca28126795d88f2e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -6247,3 +6329,5 @@ SceneRoots:
   - {fileID: 66160911}
   - {fileID: 4573277914087778576}
   - {fileID: 1327982434}
+  - {fileID: 971047879}
+  - {fileID: 638278579}

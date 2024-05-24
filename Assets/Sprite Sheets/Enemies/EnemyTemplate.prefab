@@ -424,6 +424,8 @@ MonoBehaviour:
   Enemy: {fileID: 0}
   anim: {fileID: 0}
   Target: {fileID: 0}
+  target: {x: 0, y: 0, z: 0}
+  waypoints: []
   rb: {fileID: 0}
   stopMove: 0
   moveTimer: 0
@@ -436,7 +438,7 @@ MonoBehaviour:
   attackRange_2: 0
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   attackEnabled: 0
   movementSpeed: 0
 --- !u!114 &5426752182722833074
