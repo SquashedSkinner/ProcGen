@@ -17,7 +17,7 @@ public class EnemyController : MonoBehaviour
     protected Vector3 previousPos;
 
     private bool flipped;
-    [SerializeField] protected Transform[] waypoints;
+    public Vector3[] waypoints;
 
 
     public Rigidbody2D rb;
@@ -41,6 +41,7 @@ public class EnemyController : MonoBehaviour
     public LayerMask playerLayer;
     
     public bool attackEnabled;
+    public int moveCount;
 
 
 
@@ -53,7 +54,7 @@ public class EnemyController : MonoBehaviour
         patrolling = true;
         pursuing = false;
 
-        target = waypoints[1].position;
+        target = waypoints[1];
         Target = GameObject.Find("Player").GetComponent<Transform>();
         Enemy = this.gameObject;
 
@@ -145,6 +146,13 @@ public class EnemyController : MonoBehaviour
         patrolling = false;
         pursuing = true;
 
+        velocity = ((transform.position - previousPos) / Time.deltaTime);
+        previousPos = transform.position;
+
+        if (transform.position != target)
+        {
+            Attack();
+        }
 
     }
 
@@ -153,6 +161,13 @@ public class EnemyController : MonoBehaviour
         yield return new WaitForSeconds(pauseTimer);
         target = position;
         FaceTowards(position - transform.position);
+    }
+
+    public virtual IEnumerator SetTargetDefault()
+    {
+        yield return new WaitForSeconds(pauseTimer);
+        target = waypoints[0];
+        FaceTowards(waypoints[0] - transform.position);
     }
 
     public virtual void Patrol()
@@ -169,13 +184,12 @@ public class EnemyController : MonoBehaviour
         }
         else
         {
-            if (target == waypoints[0].position)
+            if (target == waypoints[0])
             {
-                Debug.Log("Target Reached");
                 if (flipped)
                 {
                     flipped = !flipped;
-                    StartCoroutine("SetTarget", waypoints[1].position);
+                    StartCoroutine("SetTarget", waypoints[1]);
                 }
             }
             else
@@ -183,7 +197,7 @@ public class EnemyController : MonoBehaviour
                 if (!flipped)
                 {
                     flipped = !flipped;
-                    StartCoroutine("SetTarget", waypoints[0].position);
+                    StartCoroutine("SetTarget", waypoints[0]);
                 }
             }
         }
@@ -191,7 +205,7 @@ public class EnemyController : MonoBehaviour
 
     public void Attack()
     {
-        int moveChoice = Random.Range(1, 2);
+        int moveChoice = Random.Range(1, moveCount);
         if (moveChoice == 1)
         {
             anim.SetTrigger("Attack");
