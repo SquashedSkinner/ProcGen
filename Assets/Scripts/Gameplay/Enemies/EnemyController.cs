@@ -3,32 +3,19 @@ using System.Collections;
 
 public class EnemyController : MonoBehaviour
 {
-    //Player
+    // Enemy
     [SerializeField] private GameObject Enemy;
+    [SerializeField] private GameObject Pathfinder;
     public Animator anim;
 
     // Movement
-    public Transform Target;
-    private bool pursuing;
-    private bool patrolling;
+    public Transform Player;
+    public bool hasLineOfSight = false;
+    public bool inRange = false;
 
-    public Vector3 target;
-    protected Vector3 velocity;
-    protected Vector3 previousPos;
-
-    private bool flipped;
-    public Vector3[] waypoints;
-
-
-    public Rigidbody2D rb;
+    // public Rigidbody2D rb;
     bool facingRight = true;
     public bool stopMove = false;
-
-    public float moveTimer;
-    public float pauseTimer;
-    public float attackTimer;
-
-    public float teleportRange;
 
 
     // Combat
@@ -39,8 +26,6 @@ public class EnemyController : MonoBehaviour
     public float attackRange_2;
 
     public LayerMask playerLayer;
-    
-    public bool attackEnabled;
     public int moveCount;
 
 
@@ -51,16 +36,12 @@ public class EnemyController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        patrolling = true;
-        pursuing = false;
-
-        target = waypoints[1];
-        Target = GameObject.Find("Player").GetComponent<Transform>();
+        Player = GameObject.Find("Player").GetComponent<Transform>();
         Enemy = this.gameObject;
 
         movementSpeed = Enemy.GetComponent<EnemyStatistics>().GetSpeed();
-        
-        rb = Enemy.GetComponent<Rigidbody2D>();
+
+        //rb = Enemy.GetComponent<Rigidbody2D>();
 
         anim = Enemy.GetComponent<Animator>();
 
@@ -69,59 +50,69 @@ public class EnemyController : MonoBehaviour
 
     void FixedUpdate()
     {
-        FaceTowards(Target.position);
+        if (inRange)
+        {
+            RaycastHit2D ray = Physics2D.Raycast(transform.position, Player.transform.position - transform.position);
+            if (ray.collider != null)
+
+            {
+                hasLineOfSight = ray.collider.CompareTag("Player");
+                if (hasLineOfSight)
+                {
+                    Debug.DrawRay(transform.position, Player.transform.position - transform.position, Color.green);
+                }
+                else
+                {
+                    Debug.DrawRay(transform.position, Player.transform.position - transform.position, Color.red);
+                    Debug.Log(ray.collider.name);
+                }
+            }
+        } 
+        FaceTowards(Player.position);
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (inRange)
+        {
+            if (hasLineOfSight)
+            {
+                Enemy.GetComponent<Pathfinding.AIPath>().enabled = true;
+            }
+            else
+            {
+                Enemy.GetComponent<Pathfinding.AIPath>().enabled = false;
+            }
+        }
+        else
+        {
+            Enemy.GetComponent<Pathfinding.AIPath>().enabled = false;
+        }
+
         int health = this.gameObject.GetComponent<EnemyStatistics>().GetHealth();
-        
-        if (pursuing)
-        {
-            Pursue();
-        }
-        else if (patrolling)
-        {
-            Patrol();
-        }
-
-        //Movement();
-
-        // if (Enemy.transform.hasChanged == true)
-        // {
-        //     anim.SetBool("isMoving", true);
-        // }
-
-        // if (!stopMove)
-        // {
-        //     transform.position = Vector3.MoveTowards(transform.position, Target.transform.position - new Vector3(0f,0.3f,0f), movementSpeed * Time.deltaTime);
-        // }
 
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (attackEnabled == true)
+        if (col.tag == "Player")
         {
-            if (col.tag == "Player")
-            {
-
-                stopMove = true;
-                Attack();
-
-                StopCoroutine(MovementPause());
-                StopCoroutine(FollowTimer());
-
-                StartCoroutine(AttackPause());
-                StartCoroutine(MovementPause());
-
-            }
-            else if (col.tag == "Magic" || col.tag == "Ordnance")
-            {
-                // anim.SetTrigger("Teleport");
-            }
+            inRange = true;
         }
+
+
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            inRange = false;
+            Attack();
+        }
+
 
     }
 
@@ -130,7 +121,7 @@ public class EnemyController : MonoBehaviour
 
         if (col.tag == "Player")
         {
-            stopMove = false;
+            inRange = false;
         }
     }
 
@@ -138,70 +129,9 @@ public class EnemyController : MonoBehaviour
     {
         Gizmos.DrawWireSphere(attackPoint_1.position, attackRange_1);
         Gizmos.DrawWireSphere(attackPoint_2.position, attackRange_2);
-       
-    }
-    
-    public void Pursue()
-    {
-        patrolling = false;
-        pursuing = true;
-
-        velocity = ((transform.position - previousPos) / Time.deltaTime);
-        previousPos = transform.position;
-
-        if (transform.position != target)
-        {
-            Attack();
-        }
 
     }
 
-    public virtual IEnumerator SetTarget(Vector3 position)
-    {
-        yield return new WaitForSeconds(pauseTimer);
-        target = position;
-        FaceTowards(position - transform.position);
-    }
-
-    public virtual IEnumerator SetTargetDefault()
-    {
-        yield return new WaitForSeconds(pauseTimer);
-        target = waypoints[0];
-        FaceTowards(waypoints[0] - transform.position);
-    }
-
-    public virtual void Patrol()
-    {
-        pursuing = false;
-        patrolling = true;
-
-        velocity = ((transform.position - previousPos) / Time.deltaTime);
-        previousPos = transform.position;
-
-        if (transform.position != target)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, target, movementSpeed * Time.deltaTime);
-        }
-        else
-        {
-            if (target == waypoints[0])
-            {
-                if (flipped)
-                {
-                    flipped = !flipped;
-                    StartCoroutine("SetTarget", waypoints[1]);
-                }
-            }
-            else
-            {
-                if (!flipped)
-                {
-                    flipped = !flipped;
-                    StartCoroutine("SetTarget", waypoints[0]);
-                }
-            }
-        }
-    }
 
     public void Attack()
     {
@@ -215,6 +145,7 @@ public class EnemyController : MonoBehaviour
             foreach (Collider2D player in hitPlayer)
             {
                 int damage = this.gameObject.GetComponent<EnemyStatistics>().GetDamage();
+                Debug.Log(damage);
                 player.GetComponent<PlayerStatistics>().ReduceHealth(damage);
             }
         }
@@ -232,70 +163,39 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    public void Teleport()
-    {
-        float randX = Random.Range(-teleportRange, teleportRange);
-        float randY = Random.Range(-teleportRange, teleportRange);
 
-        this.gameObject.transform.position = new Vector3(transform.position.x + randX, transform.position.y + randY, 0);
-
-    }
-
-    
     public void FaceTowards(Vector3 dir)
     {
         Vector3 currentScale = this.gameObject.transform.localScale;
 
         if (dir.x < 0f)
         {
-            if(facingRight)
+            if (facingRight)
             {
-            Enemy.GetComponent<SpriteRenderer>().flipX = true;    
-            facingRight = true;
-            gameObject.transform.localScale = currentScale;
+                Enemy.GetComponent<SpriteRenderer>().flipX = true;
+                facingRight = true;
+                gameObject.transform.localScale = currentScale;
             }
         }
         else
         {
-             if(!facingRight)
+            if (!facingRight)
             {
-            Enemy.GetComponent<SpriteRenderer>().flipX = false;    
-            facingRight = false;
-            gameObject.transform.localScale = currentScale;
-            }        
+                Enemy.GetComponent<SpriteRenderer>().flipX = false;
+                facingRight = false;
+                gameObject.transform.localScale = currentScale;
+            }
         }
     }
 
-    public void ToggleMove()
+    public void EnableMove()
     {
-        Debug.Log("inverting bool");
-        stopMove = ! stopMove;
+        Enemy.GetComponent<Pathfinding.AIPath>().enabled =true;
     }
 
-    IEnumerator MovementPause()
+    public void DisableMove()
     {
-        stopMove = true;
-        anim.SetBool("ismoving", false);
-
-        yield return new WaitForSeconds(pauseTimer);
-
-        stopMove = false;
-
-        StartCoroutine(FollowTimer());
+        Enemy.GetComponent<Pathfinding.AIPath>().enabled = false;
     }
 
-    IEnumerator FollowTimer()
-    {
-        yield return new WaitForSeconds(moveTimer);
-        StartCoroutine(MovementPause());
-    }
-
-    IEnumerator AttackPause()
-    {
-        attackEnabled = false;
-
-        yield return new WaitForSeconds(attackTimer);
-
-        attackEnabled = true;
-    }
 }
