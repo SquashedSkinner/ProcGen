@@ -54,7 +54,7 @@ public class MapGenerator : MonoBehaviour {
 	public void GenerateMap()
 	{
 		// Changes between the available visual styles
-
+		TileMap.ClearAllTiles();
 		float EquatorLine = mapHeight / 2;
 
 		//if (aesthetic == Aesthetic.Satellite)
@@ -106,6 +106,7 @@ public class MapGenerator : MonoBehaviour {
                         //TileMap.SetTile(new Vector3Int(x,y,0), Tiles[i].TileSelect);
                         break;
                     }
+				
 					if (i == 0)
                         if (currentHeight <= regions[i].height)
                         {
@@ -133,6 +134,9 @@ public class MapGenerator : MonoBehaviour {
 							}
 							
 
+						}
+						else{
+TileMap.SetTile(new Vector3Int(x,y,0), OceanTile);
 						}
 
 					}
