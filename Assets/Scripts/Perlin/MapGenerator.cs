@@ -102,18 +102,16 @@ public class MapGenerator : MonoBehaviour {
                 {
                     if (currentHeight <= regions[i].height)
                     {
+						if (i == 0)
+						{
+                            TileMap.SetTile(new Vector3Int(x,y,0), OceanTile);
+                            break;
+                        }
+					
 						colourMap[y * mapWidth + x] = regions[i].colour;
                         //TileMap.SetTile(new Vector3Int(x,y,0), Tiles[i].TileSelect);
                         break;
                     }
-				
-					if (i == 0)
-                        if (currentHeight <= regions[i].height)
-                        {
-                            TileMap.SetTile(new Vector3Int(x,y,0), OceanTile);
-                            break;
-                        }
-
 
                 }
 
@@ -131,14 +129,8 @@ public class MapGenerator : MonoBehaviour {
                                 TileMap.SetTile(new Vector3Int(x, y, 0), biomes[i].TerrainTiles);
 
                                 break;
-							}
-							
-
+							}							
 						}
-						else{
-TileMap.SetTile(new Vector3Int(x,y,0), OceanTile);
-						}
-
 					}
 
 				}

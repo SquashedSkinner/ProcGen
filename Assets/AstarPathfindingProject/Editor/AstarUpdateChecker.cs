@@ -149,7 +149,7 @@ namespace Pathfinding {
 		static void UpdateCheckLoop () {
 			// Go on until the update check has been completed
 			if (!CheckForUpdates()) {
-				EditorApplication.update -= UpdateCheckLoop;
+				//EditorApplication.update -= UpdateCheckLoop;
 			}
 		}
 
@@ -182,7 +182,7 @@ namespace Pathfinding {
 			var offsetMinutes = (Application.isPlaying && Time.time > 60) || AstarPath.active != null ? -20 : 20;
 			var minutesUntilUpdate = lastUpdateCheck.AddDays(updateCheckRate).AddMinutes(offsetMinutes).Subtract(System.DateTime.UtcNow).TotalMinutes;
 			if (minutesUntilUpdate < 0) {
-				DownloadVersionInfo();
+				//DownloadVersionInfo();
 			}
 
 			return updateCheckDownload != null || minutesUntilUpdate < 10;
@@ -221,7 +221,7 @@ namespace Pathfinding {
 
 #if UNITY_2018_1_OR_NEWER
 			updateCheckDownload = UnityWebRequest.Get(query);
-			updateCheckDownload.SendWebRequest();
+			//updateCheckDownload.SendWebRequest();
 #else
 			updateCheckDownload = new WWW(query);
 #endif
