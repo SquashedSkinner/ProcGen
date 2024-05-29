@@ -436,6 +436,7 @@ GameObject:
   - component: {fileID: 7368544674530433305}
   - component: {fileID: 2906731121112805367}
   - component: {fileID: 7709274627397388845}
+  - component: {fileID: 7714636536004145055}
   m_Layer: 6
   m_Name: Black Pudding
   m_TagString: enemy
@@ -479,6 +480,21 @@ MonoBehaviour:
   currentHealth: 0
   damage: 20
   movementSpeed: 1
+  OnHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7714636536004145055}
+        m_TargetAssemblyTypeName: KnockbackFeedback, Assembly-CSharp
+        m_MethodName: PlayFeedback
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &852407663540385562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -735,6 +751,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 1099073175624749786}
+--- !u!114 &7714636536004145055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6576743938096592353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2c6893a702c0e14eac0fd878bada14e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb2d: {fileID: 7368544674530433305}
+  strength: 16
+  delay: 0.15
+  OnBegin:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDone:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7088826267210640452
 GameObject:
   m_ObjectHideFlags: 0

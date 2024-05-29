@@ -2753,9 +2753,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 198
-        y: 11
+        y: 33
         width: 13
-        height: 42
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2930,7 +2930,7 @@ TextureImporter:
         serializedVersion: 2
         x: 234
         y: 8
-        width: 38
+        width: 10
         height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2942,6 +2942,50 @@ TextureImporter:
       bones: []
       spriteID: c9d55ccf85b002144966a5699139d91c
       internalID: -1101768215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer - Naked Sprite Sheet_114
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 11
+        width: 3
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d52ea310dba4ff45bdc0418f6e2f007
+      internalID: 1376038452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer - Naked Sprite Sheet_115
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 11
+        width: 3
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9eb8572bd6aa9f44a80463b701f2335
+      internalID: 178722459
       vertices: []
       indices: 
       edges: []
@@ -2976,6 +3020,8 @@ TextureImporter:
       Adventurer - Naked Sprite Sheet_111: 1252959816
       Adventurer - Naked Sprite Sheet_112: 3506553
       Adventurer - Naked Sprite Sheet_113: -1101768215
+      Adventurer - Naked Sprite Sheet_114: 1376038452
+      Adventurer - Naked Sprite Sheet_115: 178722459
       Adventurer - Naked Sprite Sheet_12: 975410022
       Adventurer - Naked Sprite Sheet_13: -1106252345
       Adventurer - Naked Sprite Sheet_14: 1372532919

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemyStatistics : MonoBehaviour
 {
@@ -11,7 +12,8 @@ public class EnemyStatistics : MonoBehaviour
     public int damage;
     public int movementSpeed;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public UnityEvent OnHit;
+
     void Start()
     {
         anim = this.gameObject.GetComponent<Animator>();
@@ -30,6 +32,7 @@ public class EnemyStatistics : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        OnHit?.Invoke();
         currentHealth = currentHealth - damage;
         this.gameObject.GetComponent<FloatingHealthbar>().UpdateHealthBar(currentHealth, maxHealth);
         anim.SetTrigger("Hurt");
